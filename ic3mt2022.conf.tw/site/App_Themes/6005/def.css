@@ -1,7 +1,0 @@
-﻿ /*驗正控制項CSS*/
-    .validation-error *{color:Red;}
-    .validation-error label{color:Red;}
-    .validation-error input{border: 1px solid #CC0000; background: #FCF0EF url(../../img/error-bg.png) repeat-x top; color: #CC0000; margin-right: 5px;}
-    .error-message{display:block; background:url(../../img/icon_error.png) no-repeat;margin:5px; padding-left:20px; }    
-    
-    
