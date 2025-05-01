@@ -593,7 +593,7 @@
             <div class="header header-sticky">
                 <div class="container">
                     <!-- Logo -->
-                    <a class="logo" href="page0932.html"><img id="ctl00_Img_logo" class="img-responsive"
+                    <a class="logo" href="pageMain.html"><img id="ctl00_Img_logo" class="img-responsive"
                             src="userdata/1421.png" align="absmiddle" style="border-width:0px;" /></a>
                     <!-- End Logo -->
 
@@ -613,16 +613,19 @@
                 <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
                     <div class="container">
                         <ul class="nav navbar-nav">
-                            <li><a href='page0932.html?pid=901&amp;sid=1421&amp;lang=en' target='_self''  >Home</a>
-</li>
-<li><a href=' news_liste39b.html?sid=1421&amp;lang=en' target='_self''  >News</a>
-</li>
-<li><a href=' mypage1727.html?pid=4&amp;lang=en&amp;sid=1421'>Conference Themes</a>
-                            </li>
-                            <li><a href='mypage07aa.html?pid=7&amp;lang=en&amp;sid=1421'>Committees</a>
-                            </li>
-                            <li><a href='mypage868b.html?pid=10&amp;lang=en&amp;sid=1421'>Events</a>
-                            </li>
+                            <li><a href="pageHome.html" onclick="updateIframe(event, this)">首頁</a></li>
+                            <li><a href="pageNews.html" onclick="updateIframe(event, this)">最新消息</a></li>
+                            <li><a href="pageCommittees.html" onclick="updateIframe(event, this)">委員會</a></li>
+                            <li><a href="pageVIP.html" onclick="updateIframe(event, this)">大會貴賓</a></li>
+                            
+                            <!----<li><a href="mypage1727.html?pid=4&amp;lang=en&amp;sid=1421" onclick="updateIframe(event, this)">Conference Themes</a></li>-->
+                           
+                            <li><a href="pageSubmission.html" onclick="updateIframe(event, this)">投稿/發表</a></li>
+                            <li><a href="pageRegister.html" onclick="updateIframe(event, this)">註冊</a></li>
+                            <li><a href="pageAgenda.html" onclick="updateIframe(event, this)">議程</a></li>
+                           
+                            <!---- <li><a href="mypage868b.html?pid=10&amp;lang=en&amp;sid=1421" onclick="updateIframe(event, this)">Events</a></li> -->
+
 
                             <!-- Search Block -->
                             <li>
@@ -652,8 +655,8 @@
 
             <div class="paddingTop"></div>
             
-
-            <iframe src="Home.html" width="100%" height="600px" frameborder="0"></iframe>
+            <iframe id="mainFrame" src="pageHome.html" width="100%" height="600px"></iframe>
+            <!---- <iframe src="Home.html" width="100%" height="600px" frameborder="0"></iframe>  -->
 
 
             <link href="plugin/tinymce/plugins/bootstrap/css/iconpicker/css/material-design-iconic-font.min.css"
@@ -671,6 +674,7 @@
                     $("a[href$='.gif']").attr("class", "group1").attr("rel", "imggroup");
                     $("a[href$='.GIF']").attr("class", "group1").attr("rel", "imggroup");
                 });
+
 
                 $(document).ready(function () {
 
@@ -817,6 +821,14 @@
             var Page_Validators = new Array(document.getElementById("ctl00_RequiredFieldValidator1"));
             //]]>
         </script>
+        <script>
+            function updateIframe(event, anchor) {
+              event.preventDefault();
+              const url = anchor.getAttribute('href');
+              document.getElementById('mainFrame').src = url;
+            }
+          </script>
+          
 
         <script type="text/javascript">
             //<![CDATA[
