@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>議程</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 30px 15px;
+    }
+    .nav-tabs > li > a:hover {
+      background-color: #495e96 !important;
+      color: #fff;
+    }
+    .nav-tabs li a {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .nav-tabs > li.active > a {
+      color: #fff !important;
+      background-color: #b73636 !important;
+      border: 1px solid #b73636;
+    }
+    .speaker-img {
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .tab-pane {
+      padding-top: 20px;
+    }
+    .section-download {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: 0;
+      min-height: 450px;
+      max-height: 1600px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <ul class="nav nav-tabs nav-justified" id="myTab">
+    <li class="active"><a href="#agenda" data-toggle="tab">大會議程</a></li>
+    <li><a href="#keynote" data-toggle="tab">主題演講</a></li>
+    <li><a href="#sessions" data-toggle="tab">分場議程</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <!-- 大會議程 -->
+    <div class="tab-pane fade in active" id="agenda">
+      <div class="section-download">
+        <a class="btn btn-primary" target="_blank" href="userdata/1421/File/IC3MT_agenda.pdf">下載 PDF</a>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="userdata/1421/img/IC3MT_agenda.png" class="img-responsive" alt="大會議程">
+        </div>
+      </div>
+    </div>
+
+    <!-- 主題演講 -->
+    <div class="tab-pane fade" id="keynote">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="userdata/1421/img/kn2_1.jpg" class="img-responsive speaker-img" alt="Yamane">
+        </div>
+        <div class="col-md-9">
+          <h3><strong>温故知新</strong></h3>
+          <h4><strong>Developing new ideas based on study of the past</strong></h4>
+          <p>Yasuo Yamane 教授<br>廣島大學、日本／國立中央大學</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="userdata/1421/img/kn3.png" class="img-responsive speaker-img" alt="Ueno">
+        </div>
+        <div class="col-md-9">
+          <h3><strong>進化式加工技術於半導體與航太產業的應用</strong></h3>
+          <h4><strong>Providing Improved Performance & Availability</strong></h4>
+          <p>Hiroshi Ueno 部長<br>Makino Milling Machine Co., Ltd.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="userdata/1421/img/kn1.png" class="img-responsive speaker-img" alt="Ho">
+        </div>
+        <div class="col-md-9">
+          <h3><strong>透明、堅硬且脆性材料之雷射加工技術</strong></h3>
+          <h4><strong>Laser Processing of Transparent, Hard and Brittle Materials</strong></h4>
+          <p>賀正榮 教授<br>國立中央大學 機械系</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分場議程 -->
+    <div class="tab-pane fade" id="sessions">
+      <div class="section-download">
+        <a class="btn btn-primary" target="_blank" href="userdata/1421/IC3MT2022_Section%20Schedule_20221107.pdf">下載 PDF</a>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <iframe src="userdata/1421/IC3MT2022_Section%20Schedule_20221107.pdf"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (建議放在 body 結尾) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
