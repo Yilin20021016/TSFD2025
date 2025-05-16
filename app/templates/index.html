@@ -1,10 +1,70 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <title>Hello Flask</title>
-  <link rel='stylesheet' href='/static/style.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSFD 2025</title>
+    <link rel="stylesheet" href="style.css"> <!-- 可自行新增樣式檔 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <h1>Hello, Flask!</h1>
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" align="absmiddle" style="border-width:0px;" />
+  </div>
+
+  <div class="navbar">
+    <ul class="nav navbar-nav">
+      <!--  這邊改成了markdown -->
+      <li><a href="#" onclick="loadMarkdown('content/homepage.md')">首頁</a></li>
+      <li><a href="#" onclick="loadMarkdown('content/news.md')">最新消息</a></li>
+
+      <!--  下面還沒改動 -->
+      <!--
+      <li><a href="pageCommittees.html" onclick="updateIframe(event, this)">委員會</a></li>
+      <li><a href="pageVIP.html" onclick="updateIframe(event, this)">大會貴賓</a></li>           
+      <li><a href="pageSubmission.html" onclick="updateIframe(event, this)">投稿/發表</a></li>
+      <li><a href="pageRegister.html" onclick="updateIframe(event, this)">註冊</a></li>
+      <li><a href="pageAgenda.html" onclick="updateIframe(event, this)">議程</a></li>
+      -->
+      <!---- <li><a href="mypage868b.html?pid=10&amp;lang=en&amp;sid=1421" onclick="updateIframe(event, this)">Events</a></li> -->
+    </ul>
+  </div><!--/navbar-collapse-->
+
+  <!-- Markdown 內容 -->
+  <div class="markdown-content" id="markdown-container">
+      <!--  {{ md_section|safe }} -->
+  </div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p></p>
+    </footer>
+
+    <script>
+      function loadMarkdown(filePath) {
+        fetch(filePath)
+          .then(response => {
+            if (!response.ok) throw new Error("載入失敗: " + filePath);
+            return response.text();
+          })
+          .then(md => {
+            const html = marked.parse(md);
+            document.getElementById('markdown-container').innerHTML = html;
+          })
+          .catch(error => {
+            document.getElementById('markdown-container').innerHTML = "<p style='color:red;'>無法載入內容。</p>";
+            console.error(error);
+          });
+      }
+      
+      // 預設載入首頁
+      window.onload = function () {
+        loadMarkdown("content/homepage.md");
+      }
+      </script>
 </body>
 </html>
