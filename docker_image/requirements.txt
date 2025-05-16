@@ -1,0 +1,8 @@
+flask
+flask-cors
+flask-login
+flask-wtf
+flask-sqlalchemy
+python-dotenv
+gunicorn
+markdown
