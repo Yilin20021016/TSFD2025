@@ -1,1 +1,7 @@
 body { font-family: Arial; background-color: #f8f8f8; }
+
+ul.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+}
