@@ -4,50 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TSFD 2025</title>
-    <link rel="stylesheet" href="static/style.css"> <!-- 可自行新增樣式檔 -->
-
+    <link rel="stylesheet" href="style.css"> <!-- 可自行新增樣式檔 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+
+    <style>
+    /* -------------------
+       Reset & helpers
+    -------------------*/
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+
+    /* -------------------
+       Fixed Header
+    -------------------*/
+    body.header-fixed .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,.08);
+      transition: all .3s ease;
+    }
+
+    /* Optional shrink effect on scroll (add/remove .header-fixed-shrink via JS) */
+    .header.header-fixed-shrink {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    /* -------------------
+       Navigation bar
+    -------------------*/
+    .navbar { margin: 0; }
+    .navbar .nav {
+      display: flex;
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+      background: #caecf4; /* 藍色 */
+    }
+    .navbar .nav > li {
+      position: relative;
+    }
+    .navbar .nav > li > a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    /* Hover & active state */
+    .navbar .nav > li:hover,
+    .navbar .nav > li:focus-within {
+      background: rgb(147, 208, 220); /* 灰色反應 */
+    }
+    .navbar .nav > li.active {
+      background: rgb(147, 208, 220);/* 灰色反應 */
+    }
+
+    /* Responsive toggle (<=768px) */
+    .navbar-toggle {
+      background: none;
+      border: none;
+      font-size: 1.35rem;
+      padding: 16px 20px;
+      cursor: pointer;
+      display: none; /* shown only on mobile by media query */
+    }
+    @media (max-width: 768px) {
+      .navbar-toggle { display: block; }
+      .navbar .nav {
+        display: none;
+        flex-direction: column;
+      }
+      .navbar .nav.open { display: flex; }
+    }
+
+    /* -------------------
+       Content area below fixed header
+    -------------------*/
+    .main-content {
+      padding-top: 80px; /* same as (或大於) header 高度，避免被蓋住 */
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+  </style>
 </head>
 
-<body>
+<body class="header-fixed">
+  <header class="header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <!-- LOGO -->
+      <!--a class="logo" href="#"><img src="userdata/1421.png" alt="Logo" style="height:60px;" /></a-->   
+      <div class="logo">
+        <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" align="absmiddle" width: 80vw; style="max-width: 80%; height: auto;" />
+      </div>
+      <button type="button" class="navbar-toggle" onclick="toggleNav()"><span class="fa fa-bars"></span></button>
+    </div>
 
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="{{ url_for('static', filename='img/header_logo.svg') }}" alt="Logo" align="absmiddle" width: 80vw; style="max-width: 80%; height: auto;" />
-  </div>
+    <nav class="navbar">
+      <ul class="nav navbar-nav" id="mainNav">
+        <!--  改為 markdown -->
+        <li><a href="#homepage" onclick="loadMarkdown('content/homepage.md')">首頁</a></li>
+        <li><a href="#news" onclick="loadMarkdown('content/news.md')">最新消息</a></li>
+        <li><a href="#committees" onclick="loadMarkdown('content/committees.md')">委員會</a></li>
+        <li><a href="#VIP" onclick="loadMarkdown('content/VIP.md')">大會貴賓</a></li>
+        <li><a href="#submission" onclick="loadMarkdown('content/submission.md')">投稿/發表</a></li>
+        <li><a href="#register" onclick="loadMarkdown('content/register.md')" >註冊</a></li>
+        <li><a href="#agenda" onclick="loadMarkdown('content/agenda.md')">議程</a></li>
 
-  <div class="navbar">
-    <ul class="nav navbar-nav">
-      <!--  這邊改成了markdown -->
-      <li><a href="#" onclick="loadMarkdown('content/homepage.md')">首頁</a></li>
-      <li><a href="#" onclick="loadMarkdown('content/news.md')">最新消息</a></li>
-      <li><a href="#" onclick="loadMarkdown('content/committee.md')">委員會</a></li>
-      <li><a href="#" onclick="loadMarkdown('content/VIP.md')">大會貴賓</a></li>
-      <li><a href="#" onclick="loadMarkdown('content/submission.md')">投稿/發表</a></li>
-      <li><a href="#" onclick="loadMarkdown('content/register.md')">註冊</a></li>
-      <li><a href="#" onclick="loadMarkdown('content/agenda.md')">議程</a></li>
+        <!--  下面加入 onclick="updateIframe" 且保持原連結 -->
+        <!--  <li onclick="updateIframe(event, this)"><a href="pageCommittees.html">委員會</a></li>
+        <li onclick="updateIframe(event, this)"><a href="pageVIP.html">大會貴賓</a></li>
+        <li onclick="updateIframe(event, this)"><a href="pageSubmission.html">投稿/發表</a></li>
+        <li onclick="updateIframe(event, this)"><a href="pageRegister.html">註冊</a></li>
+        <li onclick="updateIframe(event, this)"><a href="pageAgenda.html">議程</a></li> -->
+      </ul>
+    </nav>
+  </header>
+  <!-- ===== End Header ===== -->
+  
 
-      <!--  下面還沒改動 -->
-      <!--
-      <li><a href="pageCommittees.html" onclick="updateIframe(event, this)">委員會</a></li>
-      <li><a href="pageVIP.html" onclick="updateIframe(event, this)">大會貴賓</a></li>           
-      <li><a href="pageSubmission.html" onclick="updateIframe(event, this)">投稿/發表</a></li>
-      <li><a href="pageRegister.html" onclick="updateIframe(event, this)">註冊</a></li>
-      <li><a href="pageAgenda.html" onclick="updateIframe(event, this)">議程</a></li>
-      -->
-      <!---- <li><a href="mypage868b.html?pid=10&amp;lang=en&amp;sid=1421" onclick="updateIframe(event, this)">Events</a></li> -->
-    </ul>
-  </div><!--/navbar-collapse-->
-
-  <!-- Markdown 內容 -->
-  <div class="markdown-content" id="markdown-container" 
-      style="background-image: url('{{ url_for('static', filename='img/background_AIGenerated.png') }}');
+ <main class="main-content">
+    <!--iframe id="contentFrame" src="pageHome.html"></iframe-->
+    <!-- Markdown 內容 -->
+    <div class="markdown-content" id="markdown-container" 
+      style="background-image: url('static/img/background_AIGenerated.png');
         background-size: cover;
         background-attachment: fixed;
         padding: 50px;
         color: black;">
      <!--  {{ md_section|safe }} -->
-  </div>
+    </div>
+
+  </main>
+  
 
     <!-- 頁尾 -->
     <footer>
@@ -55,6 +155,12 @@
     </footer>
 
     <script>
+         /* 切換手機版選單 */
+      function toggleNav() {
+        document.getElementById('mainNav').classList.toggle('open');
+      }
+
+     
       function loadMarkdown(filePath) {
         fetch(filePath)
           .then(response => {
@@ -62,8 +168,12 @@
             return response.text();
           })
           .then(md => {
-            const html = marked.parse(md);
-            document.getElementById('markdown-container').innerHTML = html;
+            // 顯示 Markdown
+            document.getElementById('markdown-container').innerHTML = marked.parse(md);
+            // 隱藏 iframe（若需要）：
+            // document.getElementById('contentFrame').style.display = 'none';
+            //const html = marked.parse(md);
+            //document.getElementById('markdown-container').innerHTML = html;
           })
           .catch(error => {
             document.getElementById('markdown-container').innerHTML = "<p style='color:red;'>無法載入內容。</p>";
