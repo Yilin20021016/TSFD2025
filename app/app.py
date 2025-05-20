@@ -15,6 +15,7 @@ def index():
         print(f"[Error in / route] {e}")
         return "載入首頁時發生錯誤", 500
 
+
 # 📌 Route: 動態提供 Markdown 檔案內容（例如 /content/news.md）
 @app.route("/content/<path:filename>")
 def serve_markdown(filename):
