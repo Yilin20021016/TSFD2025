@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href=".static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href=".static/font-awesome/css/font-awesome.min.css" />
 
     <style>
     /* -------------------
@@ -40,6 +41,7 @@
     /* -------------------
        Navigation bar
     -------------------*/
+    
     .navbar { margin: 0; }
     .navbar .nav {
       display: flex;
@@ -68,16 +70,8 @@
       background: rgb(147, 208, 220);/* 灰色反應 */
     }
 
-    /* Responsive toggle (<=768px) */
-    .navbar-toggle {
-      background: none;
-      border: none;
-      font-size: 1.35rem;
-      padding: 16px 20px;
-      cursor: pointer;
-      display: none; /* shown only on mobile by media query */
-    }
-    @media (max-width: 768px) {
+   
+    @media (max-width: 300px) {
       .navbar-toggle { display: block; }
       .navbar .nav {
         display: none;
@@ -108,7 +102,12 @@
       <div class="logo">
         <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" align="absmiddle" width: 80vw; style="max-width: 80%; height: auto;" />
       </div>
-      <button type="button" class="navbar-toggle" onclick="toggleNav()"><span class="fa fa-bars"></span></button>
+      <!--button type="button" class="navbar-toggle" onclick="toggleNav()" 
+        data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </button-->
     </div>
 
     <nav class="navbar">
@@ -153,7 +152,7 @@
     <footer>
         <p></p>
     </footer>
-
+     <script type="text/javascript" src=".static/bootstrap/js/bootstrap.min.js"></script>
     <script>
          /* 切換手機版選單 */
       function toggleNav() {
