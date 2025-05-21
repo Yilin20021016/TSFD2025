@@ -26,6 +26,7 @@ body.header-fixed .header {
 /* -------------------
     Logo
 -------------------*/
+.logo {max-height: 130px;}
 .logo-mask {
     display: inline-block;
     position: relative;
@@ -53,13 +54,18 @@ body.header-fixed .header {
     Navigation bar
 -------------------*/
 
-.navbar { margin: 0; }
+.navbar {
+    margin: 0;
+    min-height: 0;
+}
 .navbar .nav {
     display: flex;
     padding-left: 0;
     margin: 0;
+    width: 100%;
+    height:40px;
     list-style: none;
-    background: #caecf4; /* 藍色 */
+    background-color: #caecf4; /* 藍色 */
 }
 .navbar .nav > li {
     position: relative;
@@ -95,7 +101,7 @@ body.header-fixed .header {
     Content area below fixed header
 -------------------*/
 .main-content {
-    padding-top: 80px; /* same as (或大於) header 高度，避免被蓋住 */
+    padding-top: 150px; /* same as (或大於) header 高度，避免被蓋住 */
 }
 iframe {
     width: 100%;
