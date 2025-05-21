@@ -20,5 +20,5 @@
 <center><font size = '5'><strong>投稿資訊</strong></font></center>
 <br />
 
-<center><font size = '3'>歡迎點擊 [投稿系統](submission.html) 上傳您的論文摘要。</font></center>
+<center><font size = '3'>歡迎點擊 <a href="submisson.html">投稿系統</a> 上傳您的論文摘要。</font></center>
 

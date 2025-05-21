@@ -23,6 +23,26 @@ body.header-fixed .header {
     transition: all .3s ease;
 }
 
+/* -------------------
+    Logo
+-------------------*/
+.logo-mask {
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+}
+
+.logo-mask img {
+    border-radius: 5px;
+    width: 100vw;
+    display: block;
+}
+
+
 /* Optional shrink effect on scroll (add/remove .header-fixed-shrink via JS) */
 .header.header-fixed-shrink {
     padding-top: 4px;

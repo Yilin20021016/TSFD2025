@@ -16,11 +16,13 @@
 
 <body class="header-fixed">
   <header class="header">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <!-- <div class="container" style="display:flex;align-items:center;justify-content:space-between;"> -->
       <!-- LOGO -->
       <!--a class="logo" href="#"><img src="userdata/1421.png" alt="Logo" style="height:60px;" /></a-->   
       <div class="logo">
-        <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" align="absmiddle" width: 80vw; style="max-width: 80%; height: auto;" />
+        <div class="logo-mask">
+          <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" align="absmiddle"/>
+        </div>
       </div>
       <!--button type="button" class="navbar-toggle" onclick="toggleNav()" 
         data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle navigation">
@@ -28,7 +30,7 @@
           <span class="bar"></span>
           <span class="bar"></span>
       </button-->
-    </div>
+    <!-- </div> -->
 
     <nav class="navbar">
       <ul class="nav navbar-nav" id="mainNav">
@@ -70,7 +72,14 @@
 
     <!-- 頁尾 -->
     <footer>
-        <p></p>
+      <div style="background-color: black;">
+        <span style="color: white;">贊助單位</span>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+      </div>
     </footer>
      <script type="text/javascript" src=".static/bootstrap/js/bootstrap.min.js"></script>
     <script>
