@@ -1,123 +1,129 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TSFD 2025</title>
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./static/font-awesome/css/font-awesome.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TSFD 2025</title>
 
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="./static/style.css"> 
-    <link rel="stylesheet" href="./static/app.css"> 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/app.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
+  <!-- Bootstrap JS（包含 Popper） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body class="header-fixed">
   <header class="header">
-    <!-- <div class="container" style="display:flex;align-items:center;justify-content:space-between;"> -->
-      <!-- LOGO -->
-      <!--a class="logo" href="#"><img src="userdata/1421.png" alt="Logo" style="height:60px;" /></a-->   
-      <div class="logo">
-        <div class="logo-mask">
-          <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" align="absmiddle"/>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <!-- 漢堡按鈕 -->
+        <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
+          aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logo -->
+        <!-- <a class="navbar-brand" href="#">
+          <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" style="height: 40px;" />
+        </a> -->
+
+        <!-- 導覽列選單 -->
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#homepage" onclick="loadMarkdown('content/homepage.md')">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news" onclick="loadMarkdown('content/news.md')">最新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#committees" onclick="loadMarkdown('content/committees.md')">委員會</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#VIP" onclick="loadMarkdown('content/VIP.md')">大會貴賓</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#submission" onclick="loadMarkdown('content/submission.md')">投稿/發表</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#register" onclick="loadMarkdown('content/register.md')">註冊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#agenda" onclick="loadMarkdown('content/agenda.md')">議程</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!--button type="button" class="navbar-toggle" onclick="toggleNav()" 
-        data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-      </button-->
-    <!-- </div> -->
-
-    <nav class="navbar">
-      <ul class="nav navbar-nav" id="mainNav">
-        <!--  改為 markdown -->
-        <li><a href="#homepage" onclick="loadMarkdown('content/homepage.md')">首頁</a></li>
-        <li><a href="#news" onclick="loadMarkdown('content/news.md')">最新消息</a></li>
-        <li><a href="#committees" onclick="loadMarkdown('content/committees.md')">委員會</a></li>
-        <li><a href="#VIP" onclick="loadMarkdown('content/VIP.md')">大會貴賓</a></li>
-        <li><a href="#submission" onclick="loadMarkdown('content/submission.md')">投稿/發表</a></li>
-        <li><a href="#register" onclick="loadMarkdown('content/register.md')" >註冊</a></li>
-        <li><a href="#agenda" onclick="loadMarkdown('content/agenda.md')">議程</a></li>
-
-        <!--  下面加入 onclick="updateIframe" 且保持原連結 -->
-        <!--  <li onclick="updateIframe(event, this)"><a href="pageCommittees.html">委員會</a></li>
-        <li onclick="updateIframe(event, this)"><a href="pageVIP.html">大會貴賓</a></li>
-        <li onclick="updateIframe(event, this)"><a href="pageSubmission.html">投稿/發表</a></li>
-        <li onclick="updateIframe(event, this)"><a href="pageRegister.html">註冊</a></li>
-        <li onclick="updateIframe(event, this)"><a href="pageAgenda.html">議程</a></li> -->
-      </ul>
     </nav>
   </header>
   <!-- ===== End Header ===== -->
-  
 
- <main class="main-content">
+
+  <main class="main-content">
     <!--iframe id="contentFrame" src="pageHome.html"></iframe-->
     <!-- Markdown 內容 -->
-    <div class="markdown-content" id="markdown-container" 
-      style="background-image: url('static/img/background_AIGenerated.png');
+    <div class="markdown-content" id="markdown-container" style="background-image: url('static/img/background_AIGenerated.png');
         background-size: cover;
         background-attachment: fixed;
         padding: 50px;
         color: black;">
-     <!--  {{ md_section|safe }} -->
+      <!--  {{ md_section|safe }} -->
     </div>
 
   </main>
-  
 
-    <!-- 頁尾 -->
-    <footer>
-      <div style="background-color: black;">
-        <span style="color: white;">贊助單位</span>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-        <a href=""><img src="" alt=""></a>
-      </div>
-    </footer>
-     <script type="text/javascript" src=".static/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-         /* 切換手機版選單 */
-      function toggleNav() {
-        document.getElementById('mainNav').classList.toggle('open');
-      }
 
-     
-      function loadMarkdown(filePath) {
-        fetch(filePath)
-          .then(response => {
-            if (!response.ok) throw new Error("載入失敗: " + filePath);
-            return response.text();
-          })
-          .then(md => {
-            // 顯示 Markdown
-            document.getElementById('markdown-container').innerHTML = marked.parse(md);
-            // 隱藏 iframe（若需要）：
-            // document.getElementById('contentFrame').style.display = 'none';
-            //const html = marked.parse(md);
-            //document.getElementById('markdown-container').innerHTML = html;
-          })
-          .catch(error => {
-            document.getElementById('markdown-container').innerHTML = "<p style='color:red;'>無法載入內容。</p>";
-            console.error(error);
-          });
-      }
-      
-      // 預設載入首頁
-      window.onload = function () {
-        const hash = window.location.hash.substring(1);
-        const filePath = hash ? `content/${hash}.md` : `content/homepage.md`;
-        loadMarkdown(filePath);
-      }
-      </script>
+  <!-- 頁尾 -->
+  <footer>
+    <div style="background-color: black;">
+      <span style="color: white;">贊助單位</span>
+      <a href=""><img src="" alt=""></a>
+      <a href=""><img src="" alt=""></a>
+      <a href=""><img src="" alt=""></a>
+      <a href=""><img src="" alt=""></a>
+      <a href=""><img src="" alt=""></a>
+    </div>
+  </footer>
+  <script>
+    /* 切換手機版選單 */
+    function toggleNav() {
+      document.getElementById('mainNav').classList.toggle('open');
+    }
+
+
+    function loadMarkdown(filePath) {
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) throw new Error("載入失敗: " + filePath);
+          return response.text();
+        })
+        .then(md => {
+          // 顯示 Markdown
+          document.getElementById('markdown-container').innerHTML = marked.parse(md);
+          // 隱藏 iframe（若需要）：
+          // document.getElementById('contentFrame').style.display = 'none';
+          //const html = marked.parse(md);
+          //document.getElementById('markdown-container').innerHTML = html;
+        })
+        .catch(error => {
+          document.getElementById('markdown-container').innerHTML = "<p style='color:red;'>無法載入內容。</p>";
+          console.error(error);
+        });
+    }
+
+    // 預設載入首頁
+    window.onload = function () {
+      const hash = window.location.hash.substring(1);
+      const filePath = hash ? `content/${hash}.md` : `content/homepage.md`;
+      loadMarkdown(filePath);
+    }
+  </script>
 </body>
+
 </html>

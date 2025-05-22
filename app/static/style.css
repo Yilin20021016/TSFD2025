@@ -26,7 +26,7 @@ body.header-fixed .header {
 /* -------------------
     Logo
 -------------------*/
-.logo {max-height: 130px;}
+/* .logo {max-height: 130px;}
 .logo-mask {
     display: inline-block;
     position: relative;
@@ -41,61 +41,42 @@ body.header-fixed .header {
     border-radius: 5px;
     width: 100vw;
     display: block;
-}
+} */
 
 
 /* Optional shrink effect on scroll (add/remove .header-fixed-shrink via JS) */
-.header.header-fixed-shrink {
+/* .header.header-fixed-shrink {
     padding-top: 4px;
     padding-bottom: 4px;
-}
+} */
 
 /* -------------------
     Navigation bar
 -------------------*/
+.bg-light {
+    background-color: #caecf4 !important;
+    padding: 0 !important;
+    border: none !important;
+}
 
-.navbar {
-    margin: 0;
-    min-height: 0;
+.navbar > .container-fluid {
+    justify-content: start;
 }
-.navbar .nav {
-    display: flex;
-    padding-left: 0;
-    margin: 0;
-    width: 100%;
-    height:40px;
-    list-style: none;
-    background-color: #caecf4; /* 藍色 */
-}
-.navbar .nav > li {
-    position: relative;
-}
-.navbar .nav > li > a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-    white-space: nowrap;
+
+button.navbar-toggler {
+    border: none;
+    background: transparent;
 }
 
 /* Hover & active state */
-.navbar .nav > li:hover,
-.navbar .nav > li:focus-within {
+.navbar-nav > li:hover,
+.navbar-nav > li:focus-within {
     background: rgb(147, 208, 220); /* 灰色反應 */
 }
-.navbar .nav > li.active {
+.navbar-nav > li.active {
     background: rgb(147, 208, 220);/* 灰色反應 */
 }
 
-
-@media (max-width: 300px) {
-    .navbar-toggle { display: block; }
-    .navbar .nav {
-    display: none;
-    flex-direction: column;
-    }
-    .navbar .nav.open { display: flex; }
-}
 
 /* -------------------
     Content area below fixed header
