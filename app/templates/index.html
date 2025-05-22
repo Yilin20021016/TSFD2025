@@ -114,7 +114,9 @@
       
       // 預設載入首頁
       window.onload = function () {
-        loadMarkdown("content/homepage.md");
+        const hash = window.location.hash.substring(1);
+        const filePath = hash ? `content/${hash}.md` : `content/homepage.md`;
+        loadMarkdown(filePath);
       }
       </script>
 </body>
