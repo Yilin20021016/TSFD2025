@@ -27,7 +27,6 @@
           aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <!-- Logo -->
         <!-- <a class="navbar-brand" href="#">
           <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" style="height: 40px;" />
@@ -61,27 +60,50 @@
         </div>
       </div>
     </nav>
+
+    <div class="poster-wrapper">
+      <!-- 背景圖 -->
+      <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}"
+          alt="Logo" class="poster-img">
+
+      <!-- 疊在上的文字 -->
+      <div class="poster-text">
+        <div style="font-family:'Microsoft JhengHei','微軟正黑體',sans-serif;
+                    font-size:4.8vh;white-space: nowrap; text-align: center;" >
+          2025 台灣流體力學學會年會暨第一屆全國流體力學會議
+        </div>
+        <div style="font-family:Arial, sans-serif;
+                    font-size:2.3vh;white-space: nowrap; text-align: center; margin-top:2vh;" >
+          The 1st National Fluid Dynamics Conference and 2025 Annual&nbsp;Meeting of Taiwan Society of Fluid Dynamics
+        </div>
+      </div>
+    </div>
   </header>
   <!-- ===== End Header ===== -->
-
-
+  <!--  {{ md_section|safe }} -->
   <main class="main-content">
-    <!--iframe id="contentFrame" src="pageHome.html"></iframe-->
-    <!-- Markdown 內容 -->
-    <div class="markdown-content" id="markdown-container" style="background-image: url('static/img/background_AIGenerated.png');
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 50px;
-        color: black;">
+    <div class="markdown-img" id="markdown-container" 
+      style="background-image: url('/static/img/海報底圖_中部_透明.jpg');">
+
       <!--  {{ md_section|safe }} -->
     </div>
+    <!--div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">歡迎來到 2025 台灣流體力學學會年會暨第一屆全國流體力學會議</h1>
+          <p class="text-center">這裡是活動的簡介和說明。</p>
+        </div>
+      </div>
+    </div-->
 
+    <!-- 其他內容 -->
+    <div id="contentFrame" style="display: none;"></div>
   </main>
 
 
   <!-- 頁尾 -->
   <footer>
-    <div style="background-color: black;">
+    <div class='footer_backimg' style="background-image: url('/static/img/海報底圖_底部.jpg');">
       <span style="color: white;">贊助單位</span>
       <a href=""><img src="" alt=""></a>
       <a href=""><img src="" alt=""></a>
