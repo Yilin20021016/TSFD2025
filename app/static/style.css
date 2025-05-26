@@ -78,11 +78,15 @@ button.navbar-toggler {
 
 .poster-wrapper {
 position: relative;       /* 建立定位上下文 */
+width: 100%;
+overflow: hidden;
 /*display: inline-block;     讓寬度跟圖片一樣 */
 }
 
 .poster-img {
-height: 23vh;
+
+width: 100%;
+height: 22vh;
 opacity: 1;
 display: block;           /* 消除底部空白 */
 }
@@ -99,6 +103,17 @@ color: #fff;
 font-weight:bold
 
 }
+/* 如螢幕寬高比小於 665/325，<picture> 會自動載入備用底圖；
+    這裡可加額外版面調整 (字級、行距等) */
+@media (max-aspect-ratio: 665/325) {
+    .poster-img-2 {
+        width: 100%;
+        opacity: 1;
+        display: block;           /* 消除底部空白 */
+        
+    }
+}
+
 
 /* -------------------
     Content area below fixed header

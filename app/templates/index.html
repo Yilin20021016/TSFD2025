@@ -63,9 +63,12 @@
 
     <div class="poster-wrapper">
       <!-- 背景圖 -->
-      <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}"
-          alt="Logo" class="poster-img">
-
+      <!--img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}"
+          alt="Logo" class="poster-img"-->
+      <picture>
+        <source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2">
+        <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}" alt="Poster" class="poster-img">
+      </picture>
       <!-- 疊在上的文字 -->
       <div class="poster-text">
         <div style="font-family:'Microsoft JhengHei','微軟正黑體',sans-serif;
