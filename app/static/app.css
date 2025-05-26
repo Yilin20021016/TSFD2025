@@ -33,6 +33,7 @@ h1 {
 h2 {
 	font-size: 24px;
 	line-height: 33px;
+	
 }
 h3 {
 	font-size: 20px;
@@ -53,11 +54,13 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #555;
+	color: #000;
 	margin-top: 5px;
 	text-shadow: none;
 	font-weight: normal;
 	font-family: "Open Sans", Arial, sans-serif, Microsoft JhengHei;
+	font-weight: bold;
+	font-weight: 700;
 }
 
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
@@ -484,6 +487,7 @@ h3.heading-sm {
 h2.heading-xs {
 	font-size: 16px;
 	line-height: 22px;
+	font-weight: bold;
 }
 
 h3.heading-xs {
