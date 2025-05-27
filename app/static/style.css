@@ -125,7 +125,7 @@ font-weight:bold
 .markdown-img {
     background-size: cover;
     background-attachment: scroll;
-    padding: 50px;
+    padding: 10vw;
     color: black;
     
 }

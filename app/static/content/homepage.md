@@ -1,4 +1,4 @@
-<br /><!--p>因置中無markdown語法，故插入html語法替代<-->
+<!--p>因置中無markdown語法，故插入html語法替代<-->
 <center><font size = '5'><strong>Welcome to TSFD2025 !</strong></font></center>
 <br />
 <font size = '3'>
