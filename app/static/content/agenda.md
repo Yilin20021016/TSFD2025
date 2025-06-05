@@ -1,14 +1,18 @@
 # 第一天議程
 2025年10月17日（星期五)
 
-![2025年10月17日（星期五）](./static/content/agenda_day1.svg "Day 1")
+<div style="text-align: center;">
+  <img src="./static/content/agenda_day1.svg" alt="Day 1" title="Day 1"  style="max-width: 1200px; width: 100%; height: auto;">
+</div>
 
 <br />
 
 # 第二天議程
 2025年10月18日（星期六）
 
-![2025年10月17日（星期五）](./static/content/agenda_day2.svg "Day 2")
+<div style="text-align: center;">
+  <img src="./static/content/agenda_day2.svg" alt="Day 2" title="Day 2"  style="max-width: 1200px; width: 100%; height: auto;">
+</div>
 
 
 <style>
