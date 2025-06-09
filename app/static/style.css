@@ -145,3 +145,9 @@ iframe {
 
     display:block;
 }
+
+.sponsor-logo {
+    max-width: 300px;
+    max-height: 100px;
+    margin: 10px;
+}
