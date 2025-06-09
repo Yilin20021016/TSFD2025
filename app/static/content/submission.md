@@ -1,1 +1,1 @@
-[EasyChair 投稿連結](https://easychair.org/conferences?conf=tsfd2025)
+<a href="https://easychair.org/conferences?conf=tsfd2025" target="_blank">EasyChair 投稿連結</a>

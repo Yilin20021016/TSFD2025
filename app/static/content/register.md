@@ -34,7 +34,7 @@
     </div>
     <div>
         <a class="registration-btn"
-        href="order/1421/signupen0932.html?pid=901&amp;sid=1421&amp;lang=en">
+        href="#register">
         Sign in / Registration now
         </a>
     </div>

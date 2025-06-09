@@ -57,4 +57,4 @@ service ssh start
 # 切換到 /app 並啟動 Flask
 cd /app
 echo "🚀 啟動 Flask 中..."
-exec flask run --host=0.0.0.0 --port=5000
+exec gunicorn -w 4 -b 0.0.0.0:5000 app:app
