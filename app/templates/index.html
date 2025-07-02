@@ -27,10 +27,6 @@
           aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Logo -->
-        <!-- <a class="navbar-brand" href="#">
-          <img src="{{ url_for('static', filename='img/header_logo.png') }}" alt="Logo" style="height: 40px;" />
-        </a> -->
 
         <!-- 導覽列選單 -->
         <div class="collapse navbar-collapse" id="main-navbar">
@@ -55,6 +51,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#agenda" onclick="loadMarkdown('content/agenda.md')">議程</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sponsors" onclick="loadMarkdown('content/sponsors.md')">贊助廠商</a>
             </li>
           </ul>
         </div>
@@ -107,16 +106,8 @@
   <!-- 頁尾 -->
   <footer>
     <div class='footer_backimg' style="background-image: url('/static/img/海報底圖_底部.jpg');">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p style="color: black; font-size: 1.2rem; margin-top: 20px;">聯絡我們：<a href="mailto:">2025tsfd@gmail.com</a></p>
-            <span style="color: black; margin: 10px;">贊助單位</span><br>
-            <div class="row" style="margin: 10px;">
-              <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.tasa.org.tw/zh-TW"><img src="/static/img/01.002_TASA.png" alt="國家太空中心" class="sponsor-logo"></a></div>
-              <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.cadmen.com"><img src="/static/img/虎門logo-白底.jpg" alt="虎門" class="sponsor-logo" style="mix-blend-mode: multiply;"></a></div>
-              <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.pitotech.com.tw"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托" class="sponsor-logo"></a></div>
-        <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container" style="visibility: hidden;"><a target="_blank" href="https://www.pitotech.com.tw"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托" class="sponsor-logo"></a></div>
+      <div class="col-md-12 text-center">
+        <p style="color: black; font-size: 1.2rem;">聯絡我們：<a href="mailto:2025tsfd@gmail.com">2025tsfd@gmail.com</a></p>
       </div>
     </div>
   </footer>
