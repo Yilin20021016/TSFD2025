@@ -107,11 +107,15 @@
   <!-- 頁尾 -->
   <footer>
     <div class='footer_backimg' style="background-image: url('/static/img/海報底圖_底部.jpg');">
-      <span style="color: black; margin: 10px;">贊助單位</span><br>
-      <div class="row" style="margin: 10px;">
-        <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.tasa.org.tw/zh-TW"><img src="/static/img/01.002_TASA.png" alt="國家太空中心" class="sponsor-logo"></a></div>
-        <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.cadmen.com"><img src="/static/img/虎門logo-白底.jpg" alt="虎門" class="sponsor-logo" style="mix-blend-mode: multiply;"></a></div>
-        <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.pitotech.com.tw"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托" class="sponsor-logo"></a></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p style="color: black; font-size: 1.2rem; margin-top: 20px;">聯絡我們：<a href="mailto:">2025tsfd@gmail.com</a></p>
+            <span style="color: black; margin: 10px;">贊助單位</span><br>
+            <div class="row" style="margin: 10px;">
+              <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.tasa.org.tw/zh-TW"><img src="/static/img/01.002_TASA.png" alt="國家太空中心" class="sponsor-logo"></a></div>
+              <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.cadmen.com"><img src="/static/img/虎門logo-白底.jpg" alt="虎門" class="sponsor-logo" style="mix-blend-mode: multiply;"></a></div>
+              <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container"><a target="_blank" href="https://www.pitotech.com.tw"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托" class="sponsor-logo"></a></div>
         <div class="col-md-3 d-flex align-items-center justify-content-center sponsor-logo-container" style="visibility: hidden;"><a target="_blank" href="https://www.pitotech.com.tw"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托" class="sponsor-logo"></a></div>
       </div>
     </div>
@@ -132,6 +136,7 @@
         .then(md => {
           // 顯示 Markdown
           document.getElementById('markdown-container').innerHTML = marked.parse(md);
+          window.scrollTo({ top: 0, behavior: 'smooth'});
           // 隱藏 iframe（若需要）：
           // document.getElementById('contentFrame').style.display = 'none';
           //const html = marked.parse(md);
@@ -148,6 +153,8 @@
       const hash = window.location.hash.substring(1);
       const filePath = hash ? `content/${hash}.md` : `content/homepage.md`;
       loadMarkdown(filePath);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </body>
