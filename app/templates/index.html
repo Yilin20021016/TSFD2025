@@ -19,8 +19,8 @@
 </head>
 
 <body class="header-fixed">
-  <header class="header">
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <header class="header fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
         <!-- 漢堡按鈕 -->
         <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
@@ -59,21 +59,34 @@
 
     <div class="poster-wrapper">
       <!-- 背景圖 -->
-      <!--img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}"
-          alt="Logo" class="poster-img"-->
       <picture>
         <source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2">
         <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}" alt="Poster" class="poster-img">
       </picture>
-      <!-- 疊在上的文字 -->
-      <div class="poster-text">
-        <div style="font-family:'Microsoft JhengHei','微軟正黑體',sans-serif;
-                    font-size:4.8vh;white-space: nowrap; text-align: center;" >
-          2025 台灣流體力學學會年會暨第一屆全國流體力學會議
+      <!-- 疊在上的內容 -->
+      <div class="poster-content d-flex justify-content-between align-items-center">
+        <!-- 標題區 -->
+        <div class="poster-title">
+          <p style="font-family:'Microsoft JhengHei','微軟正黑體',sans-serif;
+                      font-size:4.8vh;white-space: nowrap; text-align: center;" >
+            2025 台灣流體力學學會年會暨第一屆全國流體力學會議
+          </p>
+          <p style="font-family:Arial, sans-serif;
+                      font-size:2.3vh;white-space: nowrap; text-align: center; margin-top:2vh;" >
+            The 1st National Fluid Dynamics Conference and 2025 Annual&nbsp;Meeting of Taiwan Society of Fluid Dynamics
+          </p>
         </div>
-        <div style="font-family:Arial, sans-serif;
-                    font-size:2.3vh;white-space: nowrap; text-align: center; margin-top:2vh;" >
-          The 1st National Fluid Dynamics Conference and 2025 Annual&nbsp;Meeting of Taiwan Society of Fluid Dynamics
+        <!-- 單位logo -->
+        <div class="poster-logo text-start d-none d-md-block">
+          <div class="logo-block">
+            <div class="mb-1" style="font-size: 0.7rem; font-weight: bold;">主辦單位</div>
+            <img src="/static/img/1605397931128.png" alt="主辦單位">
+          </div>
+
+          <div class="logo-block mt-3">
+            <div class="mb-1" style="font-size: 0.7rem; font-weight: bold;">協辦單位</div>
+            <img src="/static/img/ESRPC Logo.png" alt="協辦單位">
+          </div>
         </div>
       </div>
     </div>
