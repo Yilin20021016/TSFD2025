@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_from_directory, abort
 import os
+print("=== app.py entered ===")
 
 # 建立 Flask 應用實例
 app = Flask(__name__)
@@ -39,10 +40,10 @@ def serve_markdown(filename):
         abort(500, description="載入 Markdown 時發生錯誤")
 
 # # 📌 Flask 程式主入口
-# if __name__ == "__main__":
-#     try:
-#         # 啟用 debug 模式，變更檔案自動 reload，並顯示錯誤追蹤
-#         app.run(host='0.0.0.0', debug=True)
-#     except Exception as e:
-#         # 若啟動 Flask 本身發生錯誤，顯示錯誤訊息
-#         print(f"[Flask App Error] {e}")
+if __name__ == "__main__":
+    try:
+        # 啟用 debug 模式，變更檔案自動 reload，並顯示錯誤追蹤
+         app.run(host='0.0.0.0', debug=True)
+    except Exception as e:
+         # 若啟動 Flask 本身發生錯誤，顯示錯誤訊息
+        print(f"[Flask App Error] {e}")
