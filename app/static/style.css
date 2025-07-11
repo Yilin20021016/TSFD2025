@@ -67,7 +67,7 @@ button.navbar-toggler {
 .poster-content {
 position: absolute;
 top: 30%; left: 54%;
-transform: translate(-50%, -10%); /* 完全置中 */
+transform: translate(-65%, -20%); /* 完全置中 */
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.494);
 z-index: 1;                /* 疊在圖片之上 */
 line-height: 1.2;
