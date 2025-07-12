@@ -1,7 +1,9 @@
 
 
 ## 主題演講
-![大頭貼](/static/img/pngtree-person-gray-photo-placeholder-man-silhouette-on-gray-background-png-image_4847624.png)  
+
+<img src="/static/img/pngtree-person-gray-photo-placeholder-man-silhouette-on-gray-background-png-image_4847624.png" alt="大頭貼" class = "imgclass"> 
+
 許泰文  
 講座教授兼校長  
 國立臺灣海洋大學 河海工程學系  
@@ -9,7 +11,8 @@
 
 <hr/>
 
-![大頭貼](/static/img/pngtree-person-gray-photo-placeholder-man-silhouette-on-gray-background-png-image_4847624.png)  
+<img src="/static/img/pngtree-person-gray-photo-placeholder-man-silhouette-on-gray-background-png-image_4847624.png" alt="大頭貼" class = "imgclass">  
+
 林昭安  
 教授  
 國立清華大學 動力機械工程學系  
@@ -44,7 +47,7 @@
 
 
 <style>
-    img {
+    .imgclass {
         width: 150px;
         height: auto;
     }

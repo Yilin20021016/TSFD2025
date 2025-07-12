@@ -6,4 +6,5 @@
 - <a href="https://docs.google.com/uc?export=download&id=1bc8n9F1hkH77kVJkiSsfJOuulamWX2Vo" download>2025TSFD_論文全文模板</a>
 - <a href="https://docs.google.com/uc?export=download&id=1CQEpXQKkAsfj8sdRGdHxBDeNdmxri-bc" download>2025TSFD_海報模板</a>
 - <a href="https://docs.google.com/uc?export=download&id=1cAgPLLKmpOKSp6PPdWCap1R8qCR6Y1BD" download>2025TSFD_full_paper_template</a>
+
 ## 投稿作業流程
