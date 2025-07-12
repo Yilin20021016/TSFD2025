@@ -43,6 +43,10 @@ def serve_markdown(filename):
 def robots():
     return send_from_directory(app.static_folder, 'robots.txt')
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
+
 # # 📌 Flask 程式主入口
 if __name__ == "__main__":
     try:
