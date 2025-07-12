@@ -16,18 +16,18 @@
             <tbody>
                 <tr>
                     <td>9/25 前(早鳥)</td>
-                    <td>6,000</td>
-                    <td>4,000</td>
+                    <td>NT 6,000</td>
+                    <td>NT 4,000</td>
                 </tr>
                 <tr>
                     <td>9/26-10/05</td>
-                    <td>7,000</td>
-                    <td>5,000</td>
+                    <td>NT 7,000</td>
+                    <td>NT 5,000</td>
                 </tr>
                 <tr>
                     <td>10/05</td>
-                    <td>8,000</td>
-                    <td>6,000</td>
+                    <td>NT 8,000</td>
+                    <td>NT 6,000</td>
                 </tr>
             </tbody>
         </table>
