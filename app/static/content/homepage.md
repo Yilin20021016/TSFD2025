@@ -56,13 +56,47 @@
 
 <br />
 <div id ="agenda" ><center><font size = '5'><strong>重要議程</strong></font></center></div>
-<br />
-<center><font size = '3'>摘要投稿： 2025/07/01 ~ 08/30</font></center> 
-<center><font size = '3'>審查結果通知： 2025/09/15</font></center> 
-<center><font size = '3'>定稿上傳：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025/09/15~09/25</font></center>
-<center><font size = '3'>公布發表場次： 2025/09/30</font></center> 
-<center><font size = '3'>繳費截止日：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025/10/05</font></center> 
-<br />
+
+<center>
+    <body>
+    <div class="table-wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 50%;"> </th>
+                    <th style="width: 50%;"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>摘要投稿：</td>
+                    <td>2025/07/01 ~ 08/23</td>
+                </tr>
+                <tr>
+                    <td>審查結果通知：</td>
+                    <td>2025/09/15</td>
+                </tr>
+                <tr>
+                    <td>定稿上傳：</td>
+                    <td>2025/09/15 ~ 09/25</td>
+                </tr>
+                <tr>
+                    <td>公布發表場次：</td>
+                    <td>2025/09/30</td>
+                </tr>
+                <tr>
+                    <td>繳費截止日：</td>
+                    <td>2025/10/05</td>
+                </tr>
+                <tr>
+                    <td>早鳥註冊：</td>
+                    <td> ?</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </body>
+</center>
 <br />
 <br />
 <center><font size = '5'><strong>投稿資訊</strong></font></center>
@@ -70,3 +104,68 @@
 
 <center><font size = '3'>歡迎點擊 <a href="#submission" onclick="loadMarkdown('content/submission.md')">投稿系統</a> 上傳您的論文摘要。</font></center>
 
+<style>
+          /* 只影響 Markdown 區域的所有表格 --------------------------- */
+
+            /* ============  外框（負責寬度、圓角、陰影、捲軸） ============ */
+            .table-wrapper{
+            width:fit-content;     /* 寬度 = 內容本身 (表格) */
+            margin: center;         
+            border: 0.1vh solidrgba(213, 213, 213, 0.45);
+            border-radius: 0.5vh;
+
+            }
+
+          .md-content table,
+          #markdown-container table{
+            width: 100%;                /* 撐到跟外框一樣寬 */
+            /*border-collapse: collapse;   表頭／內容線條連在一起 */
+            overflow:auto;
+
+            font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+            font-size:1rem;                     /* 16px，可視需要調整 */
+            color:#333;
+          }
+
+          /* 表頭 ---------------------------------------------------- */
+          .md-content th,
+          #markdown-container th{
+            font-weight:600;
+            font-size:3.5vh;                  /* 稍大一點 */
+            padding:1vh 3vh;
+            text-align:left;                    /* 日期欄靠左 */
+            /*border-bottom:0.4vh solid rgb(192, 192, 192);     粗底線 */
+            background:#fff;                    /* 白底，避免斑馬紋影響 */
+          }
+          .md-content th,
+          #markdown-container th:not(:first-child){    
+            text-align:left;
+            }
+
+
+          /* 表格內容 ------------------------------------------------ */
+          .md-content td,
+          #markdown-container td{
+            font-size:3.5vh; 
+            padding:1vh 3vh;
+            
+            background:#fff;     
+            text-align:left; 
+          }
+            /* 表頭：金額欄改右對齊 */
+
+
+            /* 最後一列不需要底線 */
+            .md-content tr,
+            #markdown-container tr:last-child td{
+            border-bottom:none;
+            }
+
+          /* 表格過寬時的橫向捲軸 ------------------------------------ */
+          .md-content table,
+          #markdown-container table{
+            display: block;
+            overflow-x: auto;            /* 出現 scroll bar → 手機也不會被撐破版 */
+            white-space: nowrap;         /* 視需要可拿掉；拿掉就會自動換行 */
+          }
+</style>
