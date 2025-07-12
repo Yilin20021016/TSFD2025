@@ -39,6 +39,10 @@ def serve_markdown(filename):
         print(f"[Error in /content/{filename}] {e}")
         abort(500, description="載入 Markdown 時發生錯誤")
 
+@app.route('/robots.txt')
+def robots():
+    return send_from_directory(app.static_folder, 'robots.txt')
+
 # # 📌 Flask 程式主入口
 if __name__ == "__main__":
     try:
