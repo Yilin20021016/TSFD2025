@@ -8,3 +8,5 @@
 - <a href="https://docs.google.com/uc?export=download&id=1cAgPLLKmpOKSp6PPdWCap1R8qCR6Y1BD" download>2025TSFD_full_paper_template</a>
 
 ## 投稿作業流程
+
+<iframe src="./static/docs/論文繳交與審查流程.pdf#toolbar=0&navpanes=0&view=Fit">
