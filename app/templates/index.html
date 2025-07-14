@@ -68,9 +68,22 @@
     <div class="poster-wrapper">
       <picture>
         <!--source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2"-->
-        <img src="{{ url_for('static', filename='img/P4上(比較寬的)-01.png') }}" alt="Poster" class="poster-img">
+        <img src="{{ url_for('static', filename='img/P4上(比較寬的)-01.png') }}" usemap="#myMap" alt="Poster" class="poster-img">
+        <!-- 定義 map 區塊連結 -->
+        <map name="myMap">
+          <area shape="rect" coords="315,70,375,90" href="https://www.tsfd.org.tw/info.php" alt="TSFD" target="_blank">
+          <area shape="rect" coords="380,70,435,90" href="https://www.me.ncu.edu.tw/" alt="NCUME" target="_blank">
+          <area shape="rect" coords="530,70,650,90" href="https://www.tasa.org.tw/zh-TW" alt="TASA" target="_blank">
+          <area shape="rect" coords="665,70,755,90" href="http://esrpc.ncu.edu.tw/public/tw" alt="ESRPC" target="_blank">
+          <area shape="rect" coords="773,70,885,90" href="https://www.etop.org.tw/dsp/ETPC.php?c=dsp13211" alt="ETOP" target="_blank">
+          <area shape="rect" coords="900,70,1010,90" href="https://www.nchc.org.tw/" alt="NCHC" target="_blank">
+        </map>
+      
       </picture>
       <!-- 背景圖 -->
+
+
+
       <!--picture>
         <source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2">
         <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}" alt="Poster" class="poster-img">

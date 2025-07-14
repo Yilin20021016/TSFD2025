@@ -34,8 +34,8 @@
     </div>
     <div>
         <a class="registration-btn"
-        href="#register">
-        Sign in / Registration now
+        href="#register" style = "pointer-events: none" alt = "Sign in / Registration now">
+        註冊尚未開放
         </a>
     </div>
 

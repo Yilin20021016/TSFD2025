@@ -1,6 +1,7 @@
 ## 摘要論文上傳區
 - <a href="https://easychair.org/conferences?conf=tsfd2025" target="_blank">EasyChair</a>
-- <a href="/">EasyChair操作說明</a>
+- <a href="/static/docs/EasyChair 投稿操作說明.pdf" target="_blank">EasyChair操作說明</a>
+
 ## 檔案下載區
 - <a href="https://docs.google.com/uc?export=download&id=1Fdkuvsc6r0uRsFP-litaTPNiQwXkgMC-" download>2025TSFD_論文摘要模板</a>
 - <a href="https://docs.google.com/uc?export=download&id=1bc8n9F1hkH77kVJkiSsfJOuulamWX2Vo" download>2025TSFD_論文全文模板</a>
