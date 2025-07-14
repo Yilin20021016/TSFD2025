@@ -14,7 +14,7 @@
 <center>
     <body>
     <div class="table-wrapper">
-        <table class="table">
+        <table class="table" style="top: 10%; left: 20%;">
             <thead>
                 <tr>
                     <th style="width: 50%;"> </th>
@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
+                    <td style="width: 50%;">
                         <h3>A. 基礎與理論流體力學</h3>
                         <ol>
                         <li>不可壓縮與可壓縮流體</li>
@@ -41,7 +41,7 @@
                         <li>物理建模與流體數學理論</li>
                         </ol>
                     </td>
-                    <td>
+                    <td style="width: 50%;">
                         <h3>B. 計算、實驗與應用流體力學</h3>
                         <ol>
                         <li>高效能計算與加速技術（GPU、MPI、並行計算</li>
@@ -93,8 +93,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th style="width: 30%;"> </th>
-                    <th style="width: 30%;"> </th>
+                    <th style="width: 50%;"> </th>
+                    <th style="width: 50%;"> </th>
                 </tr>
             </thead>
             <tbody>
@@ -139,8 +139,8 @@
 
             /* ============  外框（負責寬度、圓角、陰影、捲軸） ============ */
             .table-wrapper{
-            /*width:fit-content;     /* 寬度 = 內容本身 (表格) */
-            width:100vw;
+            width:fit-content;     /* 寬度 = 內容本身 (表格) 
+            /*width:100vw;*/
             margin: center;         
             border: 0.1vh solidrgba(213, 213, 213, 0.45);
             border-radius: 0.5vh;
@@ -199,4 +199,9 @@
             overflow-x: auto;            /* 出現 scroll bar → 手機也不會被撐破版 */
             white-space: nowrap;         /* 視需要可拿掉；拿掉就會自動換行 */
           }
+          td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2) { /*自動換行*/
+            white-space: normal;
+            word-break: break-word;
+            } 
+
 </style>
