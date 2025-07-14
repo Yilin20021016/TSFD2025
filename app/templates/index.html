@@ -66,14 +66,17 @@
     </nav>
 
     <div class="poster-wrapper">
-      <!-- 背景圖 -->
       <picture>
+        <!--source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2"-->
+        <img src="{{ url_for('static', filename='img/P4上(比較寬的)-01.png') }}" alt="Poster" class="poster-img">
+      </picture>
+      <!-- 背景圖 -->
+      <!--picture>
         <source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2">
         <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}" alt="Poster" class="poster-img">
-      </picture>
+      </picture-->
       <!-- 疊在上的內容 -->
-      <div class="poster-content d-flex justify-content-between align-items-center">
-        <!-- 標題區 -->
+      <!--div class="poster-content d-flex justify-content-between align-items-center">
         <div class="poster-title">
           <p style="font-family:'Microsoft JhengHei','微軟正黑體',sans-serif;
                       font-size:4.8vh;white-space: nowrap; text-align: center;" >
@@ -84,17 +87,17 @@
             The 1st National Fluid Dynamics Conference and 2025 Annual&nbsp;Meeting of Taiwan Society of Fluid Dynamics
           </p>
         </div>
-      </div>
+      </div-->
     </div>
         <!-- 主辦、協辦單位 -->
-    <div class="poster-logo text-start d-none d-md-block">
+    <!--div class="poster-logo text-start d-none d-md-block">
       <div class="logo-block d-flex align-items-center justify-content-center gap-2 px-3" style="flex-wrap: nowrap;">
         <p class="mb-0" style="font-size: 0.5rem; font-weight: bold; ">主辦單位</p>
         <a href="https://www.me.ncu.edu.tw/" target="_blank"><img src="/static/img/1605397931128.png" alt="主辦單位" style="height: 1.3rem;"></a>
         <p class="mb-0 ms-3" style="font-size: 0.5rem; font-weight: bold;">協辦單位</p>
         <a href="http://esrpc.ncu.edu.tw/public/tw" target="_blank"><img src="/static/img/ESRPC Logo.png" alt="協辦單位" style="height: 1.3rem;"></a>
       </div>
-    </div>
+    </div-->
 
   </header>
   <!-- ===== End Header ===== -->

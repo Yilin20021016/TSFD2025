@@ -3,7 +3,7 @@
 <center><font size = '3'>2025年10月17日（星期五）</font></center>
 <br />
 <div style="text-align: center;">
-  <img src="./static/content/agenda_day1.svg" alt="Day 1" title="Day 1"  style="max-width: 1200px; width: 100%; height: auto;">
+  <img src="./static/content/agenda_day1.svg" alt="Day 1" title="Day 1"  style="max-width: 700px; width: 100%; height: auto;">
 </div>
 
 <br />
@@ -12,7 +12,7 @@
 <center><font size = '3'>2025年10月18日（星期六）</font></center>
 <br />
 <div style="text-align: center;">
-  <img src="./static/content/agenda_day2.svg" alt="Day 2" title="Day 2"  style="max-width: 1200px; width: 100%; height: auto;">
+  <img src="./static/content/agenda_day2.svg" alt="Day 2" title="Day 2"  style="max-width: 700px; width: 100%; height: auto;">
 </div>
 
 
