@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="國立中央大學機械系 TSFD2025 展覽資訊平台">
+  <meta name="description" content="國立中央大學機械系 TSFD2025 資訊平台">
   <meta property="og:title" content="TSFD2025 展覽平台">
-  <meta property="og:description" content="國立中央大學機械系 TSFD2025 展覽資訊平台">
+  <meta property="og:description" content="國立中央大學機械系 TSFD2025 資訊平台">
   <meta property="og:url" content="https://tsfd2025.me.ncu.edu.tw">
   <meta name="google-site-verification" content="kj08Nixb4TuTlZ_rNwSyxuT16_QNCeiuuWUdVF-gRsg" />
   <title>TSFD 2025</title>
@@ -28,8 +28,9 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
         <!-- 漢堡按鈕 -->
-        <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
-          aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -68,62 +69,33 @@
     <div class="poster-wrapper">
       <picture>
         <!--source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2"-->
-        <img src="{{ url_for('static', filename='img/P4上(比較寬的)-01.png') }}" usemap="#myMap" alt="Poster" class="poster-img">
+        <img src="{{ url_for('static', filename='img/P4上(比較寬的)-01.png') }}" usemap="#myMap" alt="Poster"
+          class="poster-img">
         <!-- 定義 map 區塊連結 -->
         <map name="myMap">
           <area shape="rect" coords="315,70,375,90" href="https://www.tsfd.org.tw/info.php" alt="TSFD" target="_blank">
           <area shape="rect" coords="380,70,435,90" href="https://www.me.ncu.edu.tw/" alt="NCUME" target="_blank">
           <area shape="rect" coords="530,70,650,90" href="https://www.tasa.org.tw/zh-TW" alt="TASA" target="_blank">
-          <area shape="rect" coords="665,70,755,90" href="http://esrpc.ncu.edu.tw/public/tw" alt="ESRPC" target="_blank">
-          <area shape="rect" coords="773,70,885,90" href="https://www.etop.org.tw/dsp/ETPC.php?c=dsp13211" alt="ETOP" target="_blank">
+          <area shape="rect" coords="665,70,755,90" href="http://esrpc.ncu.edu.tw/public/tw" alt="ESRPC"
+            target="_blank">
+          <area shape="rect" coords="773,70,885,90" href="https://www.etop.org.tw/dsp/ETPC.php?c=dsp13211" alt="ETOP"
+            target="_blank">
           <area shape="rect" coords="900,70,1010,90" href="https://www.nchc.org.tw/" alt="NCHC" target="_blank">
         </map>
-      
       </picture>
-      <!-- 背景圖 -->
-
-
-
-      <!--picture>
-        <source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2">
-        <img src="{{ url_for('static', filename='img/海報底圖_標題.jpg') }}" alt="Poster" class="poster-img">
-      </picture-->
-      <!-- 疊在上的內容 -->
-      <!--div class="poster-content d-flex justify-content-between align-items-center">
-        <div class="poster-title">
-          <p style="font-family:'Microsoft JhengHei','微軟正黑體',sans-serif;
-                      font-size:4.8vh;white-space: nowrap; text-align: center;" >
-            2025 台灣流體力學學會年會暨第一屆全國流體力學會議
-          </p>
-          <p style="font-family:Arial, sans-serif;
-                      font-size:2.3vh;white-space: nowrap; text-align: center; margin-top:2vh;" >
-            The 1st National Fluid Dynamics Conference and 2025 Annual&nbsp;Meeting of Taiwan Society of Fluid Dynamics
-          </p>
-        </div>
-      </div-->
     </div>
-        <!-- 主辦、協辦單位 -->
-    <!--div class="poster-logo text-start d-none d-md-block">
-      <div class="logo-block d-flex align-items-center justify-content-center gap-2 px-3" style="flex-wrap: nowrap;">
-        <p class="mb-0" style="font-size: 0.5rem; font-weight: bold; ">主辦單位</p>
-        <a href="https://www.me.ncu.edu.tw/" target="_blank"><img src="/static/img/1605397931128.png" alt="主辦單位" style="height: 1.3rem;"></a>
-        <p class="mb-0 ms-3" style="font-size: 0.5rem; font-weight: bold;">協辦單位</p>
-        <a href="http://esrpc.ncu.edu.tw/public/tw" target="_blank"><img src="/static/img/ESRPC Logo.png" alt="協辦單位" style="height: 1.3rem;"></a>
-      </div>
-    </div-->
 
   </header>
   <!-- ===== End Header ===== -->
   <main class="main-content">
-    <div class="markdown-img" id="markdown-container" 
-      style="background-image: url('/static/img/海報底圖_中部_透明.jpg');">
+    <div class="markdown-img" id="markdown-container" style="background-image: url('/static/img/海報底圖_中部_透明.jpg');">
     </div>
 
     <!-- 其他內容 -->
     <div id="contentFrame" style="display: none;"></div>
   </main>
   <!-- 固定在底部的贊助單位 -->
-<div class="sponsor-bar d-none d-md-flex align-items-center justify-content-center gap-2 px-3" style="
+  <div class="sponsor-bar d-none d-md-flex align-items-center justify-content-center gap-2 px-3" style="
   position: fixed;
   bottom: 0;
   left: 0;
@@ -135,13 +107,17 @@
   font-size: 0.5rem;
   font-weight: bold;
 ">
-  <span>贊助單位</span>
-  <a href="https://www.tasa.org.tw/zh-TW" target="_blank"><img src="/static/img/01.002_TASA.png" alt="國家太空中心" style="height: 0.8rem;"></a>
-  <a href="https://www.pitotech.com.tw/" target="_blank"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托科技" style="height: 1.3rem;"></a>
-  <a href="https://www.cadmen.com/" target="_blank"><img src="/static/img/虎門logo-白底.png" alt="虎門科技" style="height: 1.3rem;"></a>
-  <span style="font-size: 0.5rem; font-weight: bold">聯絡我們：<a href="mailto:2025tsfd@gmail.com">2025tsfd@gmail.com</a></span>
+    <span>贊助單位</span>
+    <a href="https://www.tasa.org.tw/zh-TW" target="_blank"><img src="/static/img/01.002_TASA.png" alt="國家太空中心"
+        style="height: 0.8rem;"></a>
+    <a href="https://www.pitotech.com.tw/" target="_blank"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托科技"
+        style="height: 1.3rem;"></a>
+    <a href="https://www.cadmen.com/" target="_blank"><img src="/static/img/虎門logo-白底.png" alt="虎門科技"
+        style="height: 1.3rem;"></a>
+    <span style="font-size: 0.5rem; font-weight: bold">聯絡我們：<a
+        href="mailto:2025tsfd@gmail.com">2025tsfd@gmail.com</a></span>
 
-</div>
+  </div>
 
 
   <!-- 頁尾 -->
@@ -158,16 +134,16 @@
       document.getElementById('mainNav').classList.toggle('open');
     }
 
-      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', function () {
-      // 取得 collapse 區塊並收合
-      const navbarCollapse = document.querySelector('.navbar-collapse');
-      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', function () {
+        // 取得 collapse 區塊並收合
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false
+        });
+        bsCollapse.hide(); // 收起導覽列
       });
-      bsCollapse.hide(); // 收起導覽列
     });
-  });
 
 
     function loadMarkdown(filePath) {
@@ -179,7 +155,7 @@
         .then(md => {
           // 顯示 Markdown
           document.getElementById('markdown-container').innerHTML = marked.parse(md);
-          window.scrollTo({ top: 0, behavior: 'smooth'});
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           // 隱藏 iframe（若需要）：
           // document.getElementById('contentFrame').style.display = 'none';
           //const html = marked.parse(md);
