@@ -39,7 +39,69 @@
 <hr/>
 
 ## 國外學者論壇
-主持人:
+主持人:  
+演講者介紹
+<table class="invited-scholars">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Affiliation</th>
+      <th>Supersonic Wind Tunnel Research & Experience</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Frank K. Lu</td>
+      <td>University of Texas at Arlington, USA</td>
+      <td>
+        <p>Dr. Lu is a globally recognized expert in hypersonic and supersonic</p>
+        <p>experimental aerodynamics. His extensive background includes </p>
+        <p>expertise  in  detonation  propulsion  systems,  shock  wave-boundary </p>
+        <p>layer  interactions,  and  experimental  flow  diagnostics.  He  has  also </p>
+        <p>served as the Director of the Aerodynamics Research Center at UTA.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Hideyuki Tanno</td>
+      <td>Tohoku University, Japan</td>
+      <td>
+        <p>Dr.  Tanno  is  a  globally  recognized  expert  in  rotating  detonation </p>
+        <p>engines  and  air-breathing  propulsion  systems  for  scramjets.  His </p>
+        <p>research also focuses on aero-thermal engineering for re-entry </p>
+        <p>spacecraft  and  hypersonic  cruisers,  as  well  as  radiation  heating  of </p>
+        <p>super-orbital  reentry  capsules.  He  has  extensive  experience  in  both </p>
+        <p>fundamental research and experimental facility development, </p>
+        <p>including his current role as a Senior Researcher at JAXA's HIEST </p>
+        <p>facility.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Joseph S. Jewell</td>
+      <td>Purdue University, USA</td>
+      <td>
+        <p>Dr.  Jewell’s  notable  experience  includes  leadership  roles  as  the </p>
+        <p>Director of Purdue University's Boeing-AFOSR Mach 6 Quiet </p>
+        <p>Tunnel  and  HYPULSE  Reflected  Shock/Expansion  Tunnel.  His </p>
+        <p>research expertise encompasses hypersonic boundary-layer </p>
+        <p>transition, low-disturbance wind tunnel testing, and advanced laser-</p>
+        <p>based diagnostics </p>
+</td>
+    </tr>
+    <tr>
+      <td>Rome Oktovianus Bura</td>
+      <td>Republic of Indonesia Defense University (RIDU)</td>
+      <td>
+        <p>Dr.  Bura  is  an  expert  in  hypersonic  aerothermodynamics  and  high-</p>
+        <p>speed  aerodynamics,  with  a  focus  on  defense-related  aerospace </p>
+        <p>technology. He has extensive experience across academia and </p>
+        <p>industry,  including  serving  as  Dean  of  the  Faculty  of  Defense </p>
+        <p>Technology at RIDU and as a Visiting Professor at the University of </p>
+        <p>Texas at Arlington. His research also covers detonation-based shock </p>
+        <p>physics and flow control.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 時間：2025/10/17 14:20~15:50
     
@@ -98,75 +160,86 @@
     p {
         margin-bottom: 0;
     }
-</style>
-<style>
-          /* 只影響 Markdown 區域的所有表格 --------------------------- */
+    /* 只影響 Markdown 區域的所有表格 --------------------------- */
 
-            /* ============  外框（負責寬度、圓角、陰影、捲軸） ============ */
-            .table-wrapper{
-            width:fit-content;     /* 寬度 = 內容本身 (表格) 
-            /*width:100vw;*/
-            margin: center;         
-            border: 0.1vh solidrgba(213, 213, 213, 0.45);
-            border-radius: 0.5vh;
+      /* ============  外框（負責寬度、圓角、陰影、捲軸） ============ */
+      .table-wrapper{
+      width:fit-content;     /* 寬度 = 內容本身 (表格) 
+      /*width:100vw;*/
+      margin: center;         
+      border: 0.1vh solidrgba(213, 213, 213, 0.45);
+      border-radius: 0.5vh;
 
-            }
+      }
 
-          .md-content table,
-          #markdown-container table{
-            width: 100%;                /* 撐到跟外框一樣寬 */
-            /*border-collapse: collapse;   表頭／內容線條連在一起 */
-            overflow:auto;
+    .md-content table,
+    #markdown-container table{
+      width: 100%;                /* 撐到跟外框一樣寬 */
+      /*border-collapse: collapse;   表頭／內容線條連在一起 */
+      overflow:auto;
 
-            font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-            font-size:1rem;                     /* 16px，可視需要調整 */
-            color:#333;
-          }
+      font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      font-size:1rem;                     /* 16px，可視需要調整 */
+      color:#333;
+    }
 
-          /* 表頭 ---------------------------------------------------- */
-          .md-content th,
-          #markdown-container th{
-            font-weight:600;
-            font-size:3.5vh;                  /* 稍大一點 */
-            padding:1vh 3vh;
-            text-align:left;                    /* 日期欄靠左 */
-            /*border-bottom:0.4vh solid rgb(192, 192, 192);     粗底線 */
-            background-color: transparent;
-          }
-          .md-content th,
-          #markdown-container th:not(:first-child){    
-            text-align:left;
-            }
+    /* 表頭 ---------------------------------------------------- */
+    .md-content th,
+    #markdown-container th{
+      font-weight:600;
+      font-size:3.5vh;                  /* 稍大一點 */
+      padding:1vh 3vh;
+      text-align:left;                    /* 日期欄靠左 */
+      /*border-bottom:0.4vh solid rgb(192, 192, 192);     粗底線 */
+      background-color: transparent;
+    }
+    .md-content th,
+    #markdown-container th:not(:first-child){    
+      text-align:left;
+      }
 
 
-          /* 表格內容 ------------------------------------------------ */
-          .md-content td,
-          #markdown-container td{
-            font-size:3.5vh; 
-            padding:1vh 3vh;
-            
-            background-color: transparent;  
-            text-align:left; 
-          }
-            /* 表頭：金額欄改右對齊 */
+    /* 表格內容 ------------------------------------------------ */
+    .md-content td,
+    #markdown-container td{
+      font-size:3.5vh; 
+      padding:1vh 3vh;
+      
+      background-color: transparent;  
+      text-align:left; 
+    }
+      /* 表頭：金額欄改右對齊 */
 
 
-            /* 最後一列不需要底線 */
-            .md-content tr,
-            #markdown-container tr:last-child td{
-            border-bottom:none;
-            }
+      /* 最後一列不需要底線 */
+      .md-content tr,
+      #markdown-container .table tr:last-child td{
+      border-bottom:none;
+      }
 
-          /* 表格過寬時的橫向捲軸 ------------------------------------ */
-          .md-content table,
-          #markdown-container table{
-            display: block;
-            overflow-x: auto;            /* 出現 scroll bar → 手機也不會被撐破版 */
-            white-space: nowrap;         /* 視需要可拿掉；拿掉就會自動換行 */
-          }
-          td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2) { /*自動換行*/
-            white-space: normal;
-            word-break: break-word;
-            } 
+    /* 表格過寬時的橫向捲軸 ------------------------------------ */
+    .md-content table,
+    #markdown-container table{
+      display: block;
+      overflow-x: auto;            /* 出現 scroll bar → 手機也不會被撐破版 */
+      white-space: nowrap;         /* 視需要可拿掉；拿掉就會自動換行 */
+    }
+    td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2) { /*自動換行*/
+      white-space: normal;
+      } 
+
+
+    /* Invited-Scholars */
+    .md-content table,
+    #markdown-container .invited-scholars th{
+      font-size: 1rem;
+      border-width: 1px;
+    }
+
+    .md-content table,
+    #markdown-container .invited-scholars td{
+      font-size: 1rem;
+      border-width: 1px;
+    }
 
 </style>
