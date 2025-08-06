@@ -68,7 +68,7 @@ def checkout():
     order_id = 'TEST' + datetime.now().strftime('%Y%m%d%H%M%S')
     item_name = '贊助方案 A'
     total_amount = 100
-    return_url = 'https://hookworm-epic-eminently.ngrok-free.app/payment-result'
+    return_url = 'https://tsfd2025.me.ncu.edu.tw/payment-result'
 
     order_data = ecpay.generate_order(order_id, total_amount, item_name, return_url)
     print(order_data, file=sys.stderr)
