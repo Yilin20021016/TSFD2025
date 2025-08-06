@@ -64,28 +64,36 @@ def ecpay_demo():
 
 @app.route('/checkout', methods=['POST'])
 def checkout():
-    request_data = request.form
-    order = OrderInfo(
-        num_normal=int(request_data.get('num-normal', 0)),
-        num_students=int(request_data.get('num-student', 0)),
-        trade_desc='TestOrder'
-    )
-    order_data = ecpay.generate_order(order)
-    form_html = f'''
-    <form id="ecpay-form" method="post" action="{ecpay.service_url}">
-        {''.join([f'<input type="hidden" name="{k}" value="{v}"/>' for k, v in order_data.items()])}
-    </form>
-    <script>document.getElementById("ecpay-form").submit();</script>
-    '''
-    return form_html
+    try:
+        request_data = request.form
+        order = OrderInfo(
+            num_normal=int(request_data.get('num-normal', 0)),
+            num_students=int(request_data.get('num-student', 0)),
+            trade_desc='TestOrder'
+        )
+        order_data = ecpay.generate_order(order)
+        form_html = f'''
+        <form id="ecpay-form" method="post" action="{ecpay.service_url}">
+            {''.join([f'<input type="hidden" name="{k}" value="{v}"/>' for k, v in order_data.items()])}
+        </form>
+        <script>document.getElementById("ecpay-form").submit();</script>
+        '''
+        return form_html
+    except Exception as e:
+        print(f"[Error in /checkout route] {e}", file=sys.stderr)
+        return "處理訂單時發生錯誤", 500
 
 @app.route('/payment-result', methods=['POST'])
 def payment_result():
-    # 這裡處理綠界的付款通知
-    print("[Payment Result] Received payment notification", file=sys.stderr)
-    request_data = request.form.to_dict()
-    print(f"[Payment Result] request_data: {request_data}", file=sys.stderr)
-    return '1|OK'
+    try:
+        # 這裡處理綠界的付款通知
+        print("[Payment Result] Received payment notification", file=sys.stderr)
+        request_data = request.form.to_dict()
+        print(f"[Payment Result] request_data: {request_data}", file=sys.stderr)
+        return '1|OK'
+    except Exception as e:
+        print(f"[Error in /payment-result route] {e}", file=sys.stderr)
+        return "處理付款結果時發生錯誤", 500
 
 #endregion
 
