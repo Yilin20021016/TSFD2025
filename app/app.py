@@ -47,6 +47,46 @@ def robots():
 def sitemap():
     return send_from_directory('static', 'sitemap.xml')
 
+#region: ECPay Demo
+import sys
+from ecpay_demo.ecpay_payment import ECPayOrder
+from datetime import datetime
+from flask import request
+
+ecpay = ECPayOrder()
+
+@app.route('/ecpay_demo')
+def ecpay_demo():
+    try:
+        return render_template("ecpay_demo.html")
+    except Exception as e:
+        print(f"[Error in /ecpay_demo route] {e}")
+        return "載入 ECPay Demo 時發生錯誤", 500
+
+@app.route('/checkout', methods=['POST'])
+def checkout():
+    order_id = 'TEST' + datetime.now().strftime('%Y%m%d%H%M%S')
+    item_name = '贊助方案 A'
+    total_amount = 100
+    return_url = 'https://hookworm-epic-eminently.ngrok-free.app/payment-result'
+
+    order_data = ecpay.generate_order(order_id, total_amount, item_name, return_url)
+    print(order_data, file=sys.stderr)
+    form_html = f'''
+    <form id="ecpay-form" method="post" action="{ecpay.service_url}">
+        {''.join([f'<input type="hidden" name="{k}" value="{v}"/>' for k, v in order_data.items()])}
+    </form>
+    <script>document.getElementById("ecpay-form").submit();</script>
+    '''
+    return form_html
+
+@app.route('/payment-result', methods=['POST'])
+def payment_result():
+    # 這裡處理綠界的付款通知
+    return '1|OK'
+
+#endregion
+
 # # 📌 Flask 程式主入口
 if __name__ == "__main__":
     try:
