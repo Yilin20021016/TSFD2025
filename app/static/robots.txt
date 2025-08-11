@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Disallow: /log/
+Disallow: /var/log/

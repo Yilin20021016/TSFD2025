@@ -57,5 +57,5 @@ service ssh start
 # 切換到 /app 並啟動 Flask
 cd /app
 echo "🚀 啟動 Flask 中..."
-exec gunicorn -w 2 -k gthread -b 0.0.0.0:5000 app:app --log-level debug
+exec gunicorn -w 2 -k gthread -b 0.0.0.0:5000 app:app --log-level info --timeout 300
 
