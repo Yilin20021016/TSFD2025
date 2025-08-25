@@ -1,5 +1,5 @@
 
-<center><font size = '5'><strong>第一天議程</strong></font></center>
+<center><font size = '5'><strong>第一天議程（暫定）</strong></font></center>
 <center><font size = '3'>2025年10月17日（星期五）</font></center>
 <br />
 <div style="text-align: center;">
@@ -8,7 +8,7 @@
 
 <br />
 
-<center><font size = '5'><strong>第二天議程</strong></font></center>
+<center><font size = '5'><strong>第二天議程（暫定）</strong></font></center>
 <center><font size = '3'>2025年10月18日（星期六）</font></center>
 <br />
 <div style="text-align: center;">
