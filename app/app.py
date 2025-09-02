@@ -67,6 +67,12 @@ def checkout():
     try:
         request_data = request.form
         order = OrderInfo(
+            paper_number=request_data.get('paper-number', ''),
+            name=request_data.get('name', ''),
+            phone_number=request_data.get('phone-number', ''),
+            receipt=request_data.get('receipt', ''),
+            tax_id=request_data.get('tax-id', ''),
+            num_meals=int(request_data.get('num-meal', 0)),
             num_normal=int(request_data.get('num-normal', 0)),
             num_students=int(request_data.get('num-student', 0)),
             trade_desc='TestOrder'

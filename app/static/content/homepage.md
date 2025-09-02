@@ -107,7 +107,7 @@
             <tbody>
                 <tr>
                     <td>摘要投稿：</td>
-                    <td>2025/07/01 ~ 08/30</td>
+                    <td>2025/07/01 ~ <del>08/30</del> <b style="color: red">9/10</b></td>
                 </tr>
                 <tr>
                     <td>審查結果通知：</td>

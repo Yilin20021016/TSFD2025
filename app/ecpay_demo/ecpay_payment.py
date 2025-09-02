@@ -5,8 +5,14 @@ from dataclasses import dataclass
 
 @dataclass
 class OrderInfo:
+    paper_number: str
+    name: str
+    phone_number: str
+    receipt: str
+    tax_id: str
     num_normal: int = 0
     num_students: int = 0
+    num_meals: int = 0
     trade_desc: str = 'TestOrder'
 
 class ECPayOrder:
@@ -34,8 +40,10 @@ class ECPayOrder:
             item_name += f'#一般身分 {order.num_normal}人 x {cost_normal}'
         if order.num_students > 0:
             item_name += f'#學生 {order.num_students}人 x {cost_student}'
+        if order.num_meals > 0:
+            item_name += f'#餐券 {order.num_meals}份 x 2000'
 
-        total_amount = (order.num_normal * cost_normal) + (order.num_students * cost_student)
+        total_amount = (order.num_normal * cost_normal) + (order.num_students * cost_student) + (order.num_meals * 2000)
         order_data = {
             'MerchantID': self.merchant_id,
             'MerchantTradeNo': self._generate_order_id(),
