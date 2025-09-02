@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 @dataclass
 class OrderInfo:
-    paper_number: str
+    paper_id: str
     name: str
     phone_number: str
     receipt: str
@@ -55,6 +55,11 @@ class ECPayOrder:
             'ReturnURL': self.return_url,
             'ChoosePayment': 'ALL',
             'EncryptType': '1',
+            'Remark': f'{order.name}/{order.phone_number}/{order.tax_id}/{order.receipt}',
+            'CustomField1': str(order.num_normal),
+            'CustomField2': str(order.num_students),
+            'CustomField3': str(order.num_meals),
+            'CustomField4': order.paper_id
         }
 
         order_data['CheckMacValue'] = self._generate_check_mac(order_data)
