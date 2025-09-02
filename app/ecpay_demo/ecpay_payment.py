@@ -9,7 +9,7 @@ class OrderInfo:
     name: str
     phone_number: str
     receipt: str
-    tax_id: str
+    tax_id: str = '00000000'
     num_normal: int = 0
     num_students: int = 0
     num_meals: int = 0
