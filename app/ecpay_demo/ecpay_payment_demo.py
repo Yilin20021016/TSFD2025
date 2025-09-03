@@ -17,10 +17,10 @@ class OrderInfo:
 
 class ECPayOrder:
     def __init__(self):
-        self.merchant_id = '3459007'
-        self.hash_key = 'ubXMkt4d21BxH2cF'
-        self.hash_iv = 'LGpMhAWNVeOUPUey'
-        self.service_url = 'https://payment.ecpay.com.tw/Cashier/AioCheckOut/V5'
+        self.merchant_id = '3002607'
+        self.hash_key = 'pwFHCqoQZGmho4w6'
+        self.hash_iv = 'EkRm7iFT261dpevs'
+        self.service_url = 'https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5'
         self.return_url = 'https://tsfd2025.me.ncu.edu.tw/payment-result'
 
     def generate_order(self, order: OrderInfo):

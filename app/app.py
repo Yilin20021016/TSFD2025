@@ -50,7 +50,7 @@ def sitemap():
 
 #region: ECPay Demo
 
-from ecpay_demo.ecpay_payment import ECPayOrder, OrderInfo
+from ecpay_demo.ecpay_payment_demo import ECPayOrder, OrderInfo
 
 ecpay = ECPayOrder()
 
@@ -71,7 +71,7 @@ def checkout():
             name=request_data.get('name', ''),
             phone_number=request_data.get('phone-number', ''),
             receipt=request_data.get('receipt', request_data.get('name', '')),
-            tax_id=request_data.get('tax-id', '00000000'),
+            tax_id=request_data.get('tax-id', ''),
             num_meals=int(request_data.get('num-meal', 0)),
             num_normal=int(request_data.get('num-normal', 0)),
             num_students=int(request_data.get('num-student', 0)),
