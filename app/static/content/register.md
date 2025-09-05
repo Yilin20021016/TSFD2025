@@ -8,9 +8,10 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th style="width: 40%;">日期</th>
-                    <th style="width: 30%;">一般身分</th>
-                    <th style="width: 20%;">學生</th>
+                    <th style="width: 30%;">日期</th>
+                    <th style="width: 20%;">一般投稿</th>
+                    <th style="width: 20%;">學生優惠投稿</th>
+                    <th style="width: 20%;">會議參與者</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,16 +19,19 @@
                     <td>9/25 前(早鳥)</td>
                     <td>NT 6,000</td>
                     <td>NT 4,000</td>
+                    <td>NT 2,000</td>
                 </tr>
                 <tr>
                     <td>9/26-10/05</td>
                     <td>NT 7,000</td>
                     <td>NT 5,000</td>
+                    <td>NT 2,000</td>
                 </tr>
                 <tr>
                     <td>10/05 後</td>
                     <td>NT 8,000</td>
                     <td>NT 6,000</td>
+                    <td>NT 2,000</td>
                 </tr>
             </tbody>
         </table>
