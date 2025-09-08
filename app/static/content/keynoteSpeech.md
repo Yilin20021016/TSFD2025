@@ -35,83 +35,10 @@
     </div>
     </body>
 </center>
-
-<!--
-## 國外學者論壇
-主持人:  
-演講者介紹
-<table class="invited-scholars">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Affiliation</th>
-      <th>Supersonic Wind Tunnel Research & Experience</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Frank K. Lu</td>
-      <td>University of Texas at Arlington, USA</td>
-      <td>
-        <p>Dr. Lu is a globally recognized expert in hypersonic and supersonic</p>
-        <p>experimental aerodynamics. His extensive background includes </p>
-        <p>expertise  in  detonation  propulsion  systems,  shock  wave-boundary </p>
-        <p>layer  interactions,  and  experimental  flow  diagnostics.  He  has  also </p>
-        <p>served as the Director of the Aerodynamics Research Center at UTA.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>Hideyuki Tanno</td>
-      <td>Tohoku University, Japan</td>
-      <td>
-        <p>Dr.  Tanno  is  a  globally  recognized  expert  in  rotating  detonation </p>
-        <p>engines  and  air-breathing  propulsion  systems  for  scramjets.  His </p>
-        <p>research also focuses on aero-thermal engineering for re-entry </p>
-        <p>spacecraft  and  hypersonic  cruisers,  as  well  as  radiation  heating  of </p>
-        <p>super-orbital  reentry  capsules.  He  has  extensive  experience  in  both </p>
-        <p>fundamental research and experimental facility development, </p>
-        <p>including his current role as a Senior Researcher at JAXA's HIEST </p>
-        <p>facility.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>Joseph S. Jewell</td>
-      <td>Purdue University, USA</td>
-      <td>
-        <p>Dr.  Jewell’s  notable  experience  includes  leadership  roles  as  the </p>
-        <p>Director of Purdue University's Boeing-AFOSR Mach 6 Quiet </p>
-        <p>Tunnel  and  HYPULSE  Reflected  Shock/Expansion  Tunnel.  His </p>
-        <p>research expertise encompasses hypersonic boundary-layer </p>
-        <p>transition, low-disturbance wind tunnel testing, and advanced laser-</p>
-        <p>based diagnostics </p>
-</td>
-    </tr>
-    <tr>
-      <td>Rome Oktovianus Bura</td>
-      <td>Republic of Indonesia Defense University (RIDU)</td>
-      <td>
-        <p>Dr.  Bura  is  an  expert  in  hypersonic  aerothermodynamics  and  high-</p>
-        <p>speed  aerodynamics,  with  a  focus  on  defense-related  aerospace </p>
-        <p>technology. He has extensive experience across academia and </p>
-        <p>industry,  including  serving  as  Dean  of  the  Faculty  of  Defense </p>
-        <p>Technology at RIDU and as a Visiting Professor at the University of </p>
-        <p>Texas at Arlington. His research also covers detonation-based shock </p>
-        <p>physics and flow control.</p>
-      </td>
-    </tr>
-  </tbody>
-</table-->
-
-<!--時間：2025/10/17 14:20~15:50
-    
-地點：麗水廳 -->
-
 <hr/>
 
 ## 專題論壇
 * ### 高超音速風洞研究
-    主持人：
-
     演講者：  
     * Frank K. Lu 教授 美國德州大學阿靈頓分校 航空航太工程學系
     * Hideyuki Tanno 教授 日本東北大學 工學研究科
@@ -126,10 +53,10 @@
 * ### 地球科學
     主持人：吳祚任 教授 國立中央大學水文與海洋科學研究所  
     演講者：
-    * 羅弘岳 副教授	國立台灣大學工程科學及海洋工程學系
-    * 吳昀達 副教授	國立成功大學水利及海洋工程學系
-    * 陳佳琳 副教授	國立成功大學水利及海洋工程學系
-    * 莊偉良 副教授	國立中山大學海洋環境及工程學系  
+    * 蔡加正 特聘教授兼海工系主任 國立臺灣海洋大學海洋工程科技系  
+    * 曾于恒 教授 國立臺灣大學海洋研究所  
+    * 羅弘岳 副教授 國立台灣大學工程科學及海洋工程學系  
+    * 蔡育霖 助理教授 國立陽明交通大學土木工程學系  
     
     時間：2025/10/17 14:20~15:50
     

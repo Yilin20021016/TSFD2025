@@ -5,19 +5,19 @@
     <h1>註冊測試頁面</h1>
     <div style="color:red; background-color: yellow;"><center>警告:這是測試頁面! 請勿使用真實信用卡資料!</center></div>
     <form method="POST" action="/checkout">
-        <label for="paper-id">論文編號：</label>
-        <input type="text" name="paper-number"><br>
         <label for="name">*註冊人姓名：</label>
         <input type="text" name="name" required><br>
         <label for="phone-number">電話：</label>
         <input type="text" name="phone-number" required><br>
+        <label for="paper-id">論文編號：</label>
+        <input type="text" name="paper-number"><br>
         <label for="receipt">收據抬頭：</label>
         <input type="text" name="receipt"><br>
         <label for="tax-id">統一編號：</label>
         <input type="text" name="tax-id"><br>
-        <label for="num-normal">一般身分：</label>
+        <label for="num-normal">一般投稿：</label>
         <input type="number" name="num-normal" value="1" min="0"><br>
-        <label for="num-student">學生：</label>
+        <label for="num-student">學生投稿：</label>
         <input type="number" name="num-student" value="0" min="0"><br>
         <label for="num-meal">同行的會議參與者：</label>
         <input type="number" name="num-meal" value="0" min="0"><br>
