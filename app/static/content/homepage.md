@@ -1,4 +1,3 @@
-<!--p>因置中無markdown語法，故插入html語法替代<-->
 <center><h2><strong>Welcome to TSFD2025 !</strong></h2></center>
 <br />
 <p style="text-align: justify;">

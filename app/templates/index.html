@@ -42,9 +42,6 @@
               <a class="nav-link" href="#homepage" onclick="loadMarkdown('content/homepage.md')">首頁</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#news" onclick="loadMarkdown('content/news.md')" hidden>最新消息</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#committees" onclick="loadMarkdown('content/committees.md')">委員會</a>
             </li>
             <li class="nav-item">
@@ -69,7 +66,6 @@
 
     <div class="poster-wrapper">
       <picture>
-        <!--source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2"-->
         <img src="{{ url_for('static', filename='img/P4-1-01.jpg') }}" usemap="#myMap" alt="Poster"
           class="poster-img">
         <!-- 定義 map 區塊連結 -->
@@ -124,13 +120,6 @@
 
 
   <!-- 頁尾 -->
-  <!--footer>
-    <div class='footer_backimg' style="background-image: url('/static/img/海報底圖_底部.jpg');">
-      <div class="col-md-12 text-center">
-        <p style="color: black; font-size: 1.2rem;">聯絡我們：<a href="mailto:2025tsfd@gmail.com">2025tsfd@gmail.com</a></p>
-      </div>
-    </div>
-  </footer-->
   <script>
     /* 切換手機版選單 */
     function toggleNav() {
@@ -159,10 +148,6 @@
           // 顯示 Markdown
           document.getElementById('markdown-container').innerHTML = marked.parse(md);
           window.scrollTo({ top: 0, behavior: 'smooth' });
-          // 隱藏 iframe（若需要）：
-          // document.getElementById('contentFrame').style.display = 'none';
-          //const html = marked.parse(md);
-          //document.getElementById('markdown-container').innerHTML = html;
         })
         .catch(error => {
           document.getElementById('markdown-container').innerHTML = "<p style='color:red;'>無法載入內容。</p>";
