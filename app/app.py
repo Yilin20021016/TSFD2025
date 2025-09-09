@@ -16,6 +16,7 @@ def index():
         # 若發生錯誤，印出錯誤訊息並回傳 500 錯誤頁
         print(f"[Error in / route] {e}", file=sys.stderr)
         return "載入首頁時發生錯誤", 500
+    
 
 
 # 📌 Route: 動態提供 Markdown 檔案內容（例如 /content/news.md）
@@ -107,7 +108,7 @@ def payment_result():
 if __name__ == "__main__":
     try:
         # 啟用 debug 模式，變更檔案自動 reload，並顯示錯誤追蹤
-         app.run(host='0.0.0.0', debug=False)
+         app.run(host='0.0.0.0', debug=True)
     except Exception as e:
          # 若啟動 Flask 本身發生錯誤，顯示錯誤訊息
         print(f"[Flask App Error] {e}", file=sys.stderr)

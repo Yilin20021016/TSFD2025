@@ -1,6 +1,91 @@
 <!DOCTYPE html>
-<html>
-<head><title>綠界測試</title></head>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="國立中央大學機械系 TSFD2025 資訊平台">
+  <meta property="og:title" content="TSFD2025 展覽平台">
+  <meta property="og:description" content="國立中央大學機械系 TSFD2025 資訊平台">
+  <meta property="og:url" content="https://tsfd2025.me.ncu.edu.tw">
+  <meta name="google-site-verification" content="kj08Nixb4TuTlZ_rNwSyxuT16_QNCeiuuWUdVF-gRsg" />
+  <link rel="icon" href="data:image/x-icon;," type="image/x-icon"> <!-- 空白 favicon，避免 404 --> 
+  <title>TSFD 2025 綠界測試</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/app.css">
+
+  <!-- Bootstrap JS（包含 Popper） -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body class="header-fixed">
+  <header class="header fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- 漢堡按鈕 -->
+        <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 導覽列選單 -->
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#homepage" onclick="loadMarkdown('content/homepage.md')">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news" onclick="loadMarkdown('content/news.md')" hidden>最新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#committees" onclick="loadMarkdown('content/committees.md')">委員會</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#keynoteSpeech" onclick="loadMarkdown('content/keynoteSpeech.md')">主題演講</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#submission" onclick="loadMarkdown('content/submission.md')">投稿</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#register" onclick="loadMarkdown('content/register.md')">註冊</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#agenda" onclick="loadMarkdown('content/agenda.md')">議程</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#venue" onclick="loadMarkdown('content/venue.md')">會場資訊</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="poster-wrapper">
+      <picture>
+        <!--source media="(max-aspect-ratio: 665/325)" srcset="{{ url_for('static', filename='img/海報底圖_標題2.jpg') }}" class="poster-img-2"-->
+        <img src="{{ url_for('static', filename='img/P4-1-01.jpg') }}" usemap="#myMap" alt="Poster"
+          class="poster-img">
+        <!-- 定義 map 區塊連結 -->
+        <map name="myMap">
+          <area shape="rect" coords="515,130,575,150" href="https://www.tsfd.org.tw/info.php" alt="TSFD" target="_blank">
+          <area shape="rect" coords="580,130,635,150" href="https://www.me.ncu.edu.tw/" alt="NCUME" target="_blank">
+          <area shape="rect" coords="730,130,850,150" href="https://www.tasa.org.tw/zh-TW" alt="TASA" target="_blank">
+          <area shape="rect" coords="865,130,955,150" href="http://esrpc.ncu.edu.tw/public/tw" alt="ESRPC"
+            target="_blank">
+          <area shape="rect" coords="773,70,885,90" href="https://www.etop.org.tw/dsp/ETPC.php?c=dsp13211" alt="ETOP"
+            target="_blank">
+          <area shape="rect" coords="900,70,1010,90" href="https://www.nchc.org.tw/" alt="NCHC" target="_blank">
+        </map>
+      </picture>
+    </div>
+ </header>
 <body>
     <h1>註冊測試頁面</h1>
     <div style="color:red; background-color: yellow;"><center>警告:這是測試頁面! 請勿使用真實信用卡資料!</center></div>
@@ -25,8 +110,94 @@
         <input type="text" name="paper-number" id="paper-number" disabled><br>
         <button type="submit">立即付款</button>
     </form>
+
+  <!-- 固定在底部的贊助單位 -->
+  <div class="sponsor-bar d-none d-md-flex align-items-center justify-content-center gap-2 px-3" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  z-index: 9999;
+  padding: 0.25rem 1rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+">
+    <span>贊助單位</span>
+    <a href="https://www.tasa.org.tw/zh-TW" target="_blank"><img src="/static/img/01.002_TASA.png" alt="國家太空中心"
+        style="height: 0.8rem;"></a>
+    <a href="https://www.pitotech.com.tw/" target="_blank"><img src="/static/img/LOGO_高解析-亮光去背 皮托中文 橫.png" alt="皮托科技"
+        style="height: 1.3rem;"></a>
+    <a href="https://www.cadmen.com/" target="_blank"><img src="/static/img/虎門logo-白底.png" alt="虎門科技"
+        style="height: 1.3rem;"></a>
+    <a href="https://utopia-inst.com.tw/" target="_blank"><img src="/static/img/新廣鈦logo.jpg" alt="新廣鈦"
+        style="height: 1.3rem;"></a>
+    <span style="font-size: 0.5rem; font-weight: bold">聯絡我們：<a
+        href="mailto:2025tsfd@gmail.com">2025tsfd@gmail.com</a></span>
+
+  </div>
+
+
+  <!-- 頁尾 -->
+  <!--footer>
+    <div class='footer_backimg' style="background-image: url('/static/img/海報底圖_底部.jpg');">
+      <div class="col-md-12 text-center">
+        <p style="color: black; font-size: 1.2rem;">聯絡我們：<a href="mailto:2025tsfd@gmail.com">2025tsfd@gmail.com</a></p>
+      </div>
+    </div>
+  </footer-->
+  <script>
+    /* 切換手機版選單 */
+    function toggleNav() {
+      document.getElementById('mainNav').classList.toggle('open');
+    }
+
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', function () {
+        // 取得 collapse 區塊並收合
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+          toggle: false
+        });
+        bsCollapse.hide(); // 收起導覽列
+      });
+    });
+
+
+    function loadMarkdown(filePath) {
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) throw new Error("載入失敗: " + filePath);
+          return response.text();
+        })
+        .then(md => {
+          // 顯示 Markdown
+          document.getElementById('markdown-container').innerHTML = marked.parse(md);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          // 隱藏 iframe（若需要）：
+          // document.getElementById('contentFrame').style.display = 'none';
+          //const html = marked.parse(md);
+          //document.getElementById('markdown-container').innerHTML = html;
+        })
+        .catch(error => {
+          document.getElementById('markdown-container').innerHTML = "<p style='color:red;'>無法載入內容。</p>";
+          console.error(error);
+        });
+    }
+
+    // 預設載入首頁
+    window.onload = function () {
+      const hash = window.location.hash.substring(1);
+      const filePath = hash ? `content/${hash}.md` : `content/homepage.md`;
+      loadMarkdown(filePath);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 
+<<<<<<< Updated upstream
 <script>
     document.getElementById('has-paper').addEventListener('change', function() {
         document.getElementById('paper-number').disabled = !this.checked;
@@ -34,6 +205,8 @@
         document.getElementById('num-student').disabled = !this.checked;
     });
 </script>
+=======
+>>>>>>> Stashed changes
 </html>
 
 
