@@ -37,11 +37,11 @@ class ECPayOrder:
 
         item_name = f'訂購日期 {trade_date.strftime("%m/%d %H:%M")}'
         if order.num_normal > 0:
-            item_name += f'#一般身分 {order.num_normal}人 x {cost_normal}'
+            item_name += f'#一般投稿 {order.num_normal}人 x {cost_normal}'
         if order.num_students > 0:
-            item_name += f'#學生 {order.num_students}人 x {cost_student}'
+            item_name += f'#學生投稿 {order.num_students}人 x {cost_student}'
         if order.num_meals > 0:
-            item_name += f'#餐券 {order.num_meals}份 x 2000'
+            item_name += f'#會議參與者 {order.num_meals}人 x 2000'
 
         total_amount = (order.num_normal * cost_normal) + (order.num_students * cost_student) + (order.num_meals * 2000)
         order_data = {
@@ -66,7 +66,7 @@ class ECPayOrder:
         return order_data
     
     def _generate_order_id(self):
-        return 'TEST' + datetime.now().strftime('%Y%m%d%H%M%S')
+        return 'TSFD' + datetime.now().strftime('%Y%m%d%H%M%S')
 
     def _generate_check_mac(self, params):
         sorted_items = sorted(params.items())
