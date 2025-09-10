@@ -108,7 +108,7 @@ def payment_result():
 if __name__ == "__main__":
     try:
         # 啟用 debug 模式，變更檔案自動 reload，並顯示錯誤追蹤
-         app.run(host='0.0.0.0', debug=True)
+         app.run(host='0.0.0.0', debug=False)
     except Exception as e:
          # 若啟動 Flask 本身發生錯誤，顯示錯誤訊息
         print(f"[Flask App Error] {e}", file=sys.stderr)
