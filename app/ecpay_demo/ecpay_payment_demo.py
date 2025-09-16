@@ -2,6 +2,9 @@ import hashlib
 import urllib.parse
 from datetime import datetime
 from dataclasses import dataclass
+from db_controller import DBController
+
+db_controller = DBController('ecpay_orders.db')
 
 @dataclass
 class OrderInfo:
@@ -13,7 +16,7 @@ class OrderInfo:
     num_normal: int = 0
     num_students: int = 0
     num_meals: int = 0
-    trade_desc: str = 'TestOrder'
+    trade_desc: str = 'TSFD2025 Conference Registration'
 
 class ECPayOrder:
     def __init__(self):
@@ -55,19 +58,20 @@ class ECPayOrder:
             'ReturnURL': self.return_url,
             'ChoosePayment': 'ALL',
             'EncryptType': '1',
-            'Remark': f'{order.name}/{order.phone_number}/{order.tax_id}/{order.receipt}',
+            'Remark': f'/{order.tax_id}/{order.receipt}',
             'CustomField1': str(order.num_normal),
             'CustomField2': str(order.num_students),
             'CustomField3': str(order.num_meals),
             'CustomField4': order.paper_id
         }
-        
+
+        db_controller.new_order(order_data)
 
         order_data['CheckMacValue'] = self._generate_check_mac(order_data)
         return order_data
     
     def _generate_order_id(self):
-        return 'TEST' + datetime.now().strftime('%Y%m%d%H%M%S')
+        return 'TSFD' + datetime.now().strftime('%Y%m%d%H%M%S')
 
     def _generate_check_mac(self, params):
         sorted_items = sorted(params.items())

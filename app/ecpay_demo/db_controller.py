@@ -26,7 +26,10 @@ class DBController:
         
     @db_operation
     def new_order(self, cur, order_info):
-        return
         cur.execute(
-            "INSERT INTO orders VALUES (??????)"
+            "INSERT INTO orders VALUES (?,?,?,?,?,?,?,?,?,?)",
+            (
+                order_info.name,
+            )
         )
+        return
