@@ -37,9 +37,15 @@
         </table>
     </div>
 
+<button class="btn btn-primary mb-3" style="font-size: 2vh" type="button" data-bs-toggle="collapse" data-bs-target="#registerSection" aria-expanded="false" aria-controls="registerSection">查看註冊流程與繳費程序</button>
+
+<div class="collapse" id="registerSection">
+  <div class="card card-body">
+
   ### 註冊流程
   * 作者收到 **「審查通知」** 和 **「上傳定稿」** 後即可進行繳費。
   * 每篇稿件須至少一人繳交註冊費，單一註冊僅有一份兩日餐卷，如有其他作者或作者家屬與會，需加購餐卷（延伸註冊費）：1,000元/每位人士。
+  * 未投稿任何稿件，僅參與學術交流活動，仍須繳交註冊費，身分為 __會議參與者__
   <br/>
 
   ### 繳費程序（含早鳥優惠、一般報名）
@@ -49,18 +55,21 @@
   【銀行代碼：玉山銀行808，新竹分行】  
   【銀行帳號0060-940-039027】
 
-  2. 上傳匯款證明，[點我線上填單]()   <!-- 這邊放表單連結 -->
+  2. 上傳匯款證明，[點我線上填單]() <!-- 這邊放表單連結 -->  
   **請執行上述1、2項，方才完成註冊作業。**
   <br/>
 
   #### 訂房流程請至<a href="#venue" onclick="loadMarkdown('content/venue.md')">會場資訊</a>查看
 
-  <div>
-      <a class="registration-btn"
-      href="#register" style = "pointer-events: none" alt = "Sign in / Registration now">
-      註冊尚未開放
-      </a>
   </div>
+</div>
+
+<div hidden>
+    <a class="registration-btn"
+    href="#register" style = "pointer-events: none" alt = "Sign in / Registration now">
+    註冊尚未開放
+    </a>
+</div>
 
 </body>
 
