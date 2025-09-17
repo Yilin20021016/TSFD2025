@@ -60,7 +60,8 @@
   **請執行上述1、2項，方才完成註冊作業。**
   <br/><br/>
 
-  ##### 訂房流程請至<a href="#venue" onclick="loadMarkdown('content/venue.md')">會場資訊</a>查看
+  ##### 訂房相關請至<a href="#venue" onclick="loadMarkdown('content/venue.md')">會場資訊</a>查看
+  為確保順利訂房，請於 __2025年9月30日（含）__ 前 完成預約手續。
 
   </div>
 </div>
