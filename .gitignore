@@ -175,3 +175,4 @@ cython_debug/
 
 # Customer files
 .DS_Store
+*.db

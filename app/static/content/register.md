@@ -55,7 +55,7 @@
   【銀行代碼：玉山銀行808，新竹分行】  
   【銀行帳號0060-940-039027】
 
-  2. 上傳匯款證明，[點我線上填單]() <!-- 這邊放表單連結 -->  
+  2. 上傳匯款證明，<a href="https://docs.google.com/forms/d/e/1FAIpQLSd7E7SS5EIcSSjrUA9GMeKxl6BH5CoViLYSAYvoZb4xPfFVYA/viewform" target="_blank">點我線上填單</a>  
 
   **請執行上述1、2項，方才完成註冊作業。**
   <br/><br/>
