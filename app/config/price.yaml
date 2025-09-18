@@ -1,0 +1,9 @@
+- deadline: 2025-09-26
+  normal: 6000
+  student: 4000
+- deadline: 2025-10-06
+  normal: 7000
+  student: 5000
+- deadline: null
+  normal: 8000
+  student: 6000
