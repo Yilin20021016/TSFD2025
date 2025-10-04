@@ -25,7 +25,7 @@
                     <td>
 <li>林昭安 - 教授  </li>
 <li>國立清華大學 動力機械工程學系   </li> 
-<li>演講主題：(準備中)  </li>
+<li>演講主題：Lattice Boltzmann Method: A Paradigm for Turbulence and Multiphase Flows on GPUs  </li>
 <li>時間：2025/10/18 09:00~09:50  </li>
 <li>地點：麗水廳</li>
 </td>
