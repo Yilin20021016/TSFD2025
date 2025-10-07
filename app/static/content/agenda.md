@@ -1,7 +1,7 @@
 
 <center>
-  <a class="booking-btn" href="./static/docs/TSFD2025大會議程_主題演講_論文發表議程_1004p.pdf" download>點我下載議程</a><br/>
-  <iframe src="./static/docs/TSFD2025大會議程_主題演講_論文發表議程_1004p.pdf#navpanes=0&view=Fit" style="border: none; width: 1000px; height: 750px"></iframe>
+  <a class="booking-btn" href="./static/docs/TSFD2025大會議程_詳細發表議程1006版.pdf" download>點我下載議程</a><br/>
+  <iframe src="./static/docs/TSFD2025大會議程_詳細發表議程1006版.pdf#navpanes=0&view=Fit" style="border: none; width: 1000px; height: 750px"></iframe>
 </center>
 
 <style>
